@@ -13,14 +13,14 @@
         }
     ],
 
+    "require": {
+        "php": ">=5.4.0"
+    },
+
     "autoload": {
         "psr-0": {
             "Fresh\\Transliteration": "src/"
         }
-    },
-
-    "require": {
-        "php": ">=5.4.0"
     },
 
     "minimum-stability": "stable"
