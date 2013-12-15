@@ -1,0 +1,27 @@
+{
+    "name": "fresh/transliteration",
+    "description": "Simple PHP library for transliteration",
+    "keywords": ["transliteration", "transliterate", "ukrainian", "english"],
+
+    "type": "library",
+    "homepage": "http://fre5h.github.io/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artem Genvald",
+            "email": "genvaldartem@gmail.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-0": {
+            "Fresh\\Transliteration": "src/"
+        }
+    },
+
+    "require": {
+        "php": ">=5.4.0"
+    },
+
+    "minimum-stability": "stable"
+}
