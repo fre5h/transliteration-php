@@ -24,7 +24,7 @@ class UkrainianToEnglish
     /**
      * @var array Rules of transliteration from Ukrainian to English
      */
-    protected static $ukrainianToEnglishRules = [
+    public static $ukrainianToEnglishRules = [
         ['А', 'A'],
         ['Б', 'B'],
         ['В', 'V'],
