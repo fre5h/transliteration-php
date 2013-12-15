@@ -10,27 +10,27 @@
 
 namespace Tests\Fresh\Transliteration;
 
-use Fresh\Transliteration\UkrainianToEnglish;
+use Fresh\Transliteration\Transliterator;
 
 /**
- * Transliteration Test
+ * Transliterator Test
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
  */
-class TransliterationTest extends \PHPUnit_Framework_TestCase
+class TransliteratorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var UkrainianToEnglish
+     * @var Transliterator
      */
-    protected $transliteration;
+    protected $transliterator;
 
     /**
      * Set up environment
      */
     public function setUp()
     {
-        $this->transliteration = new UkrainianToEnglish();
+        $this->transliterator = new Transliterator();
     }
 
     /**
@@ -44,7 +44,7 @@ class TransliterationTest extends \PHPUnit_Framework_TestCase
      */
     public function transliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
     {
-        $this->assertEquals($transliteratedText, $this->transliteration->fromUkrainianToEnglish($ukrainianText));
+        $this->assertEquals($transliteratedText, $this->transliterator->fromUkrainianToEnglish($ukrainianText));
     }
 
     /**

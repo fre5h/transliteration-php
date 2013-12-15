@@ -1,6 +1,6 @@
 {
     "name": "fresh/transliteration",
-    "description": "Simple PHP library for transliteration",
+    "description": "Small PHP library for transliteration",
     "keywords": ["transliteration", "transliterate", "ukrainian", "english"],
 
     "type": "library",

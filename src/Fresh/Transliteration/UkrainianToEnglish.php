@@ -13,15 +13,18 @@ namespace Fresh\Transliteration;
 /**
  * Transliteration from Ukrainian to English
  *
+ * According to the rules of transliteration, that are described in the resolution
+ * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
+ *
  * @author Artem Genvald <genvaldartem@gmail.com>
- * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF Resolution #55 of the Cabinet of Ministers of Ukraine
+ * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
  */
 class UkrainianToEnglish
 {
     /**
      * @var array Rules of transliteration from Ukrainian to English
      */
-    protected $ukrainianToEnglish = [
+    protected static $ukrainianToEnglishRules = [
         ['А', 'A'],
         ['Б', 'B'],
         ['В', 'V'],
@@ -93,26 +96,23 @@ class UkrainianToEnglish
     /**
      * Transliterate Ukrainian text to English
      *
-     * According to the rules of transliteration, that are described in the resolution
-     * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
-     *
-     * @param string $ukrainianText
+     * @param string $ukrainianText Ukrainian text
      *
      * @return string
      */
-    public function fromUkrainianToEnglish($ukrainianText)
+    public static function transliterate($ukrainianText)
     {
         $transliteratedText = '';
 
         if (mb_strlen($ukrainianText) > 0) {
             // If found "Zgh|zgh" exception then replace it
-            if ($this->checkForZghException($ukrainianText)) {
+            if (self::checkForZghException($ukrainianText)) {
                 $ukrainianText = str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
             }
             // Transliteration is doing by rendering each letter
             $transliteratedText = str_replace(
-                array_keys($this->ukrainianToEnglish),
-                array_values($this->ukrainianToEnglish),
+                array_keys(self::$ukrainianToEnglishRules),
+                array_values(self::$ukrainianToEnglishRules),
                 $ukrainianText
             );
         }
@@ -121,13 +121,13 @@ class UkrainianToEnglish
     }
 
     /**
-     * Check text for "Zgh|zgh" exception
+     * Check Ukrainian text for "Zgh|zgh" exception
      *
-     * @param string $ukrainianText
+     * @param string $ukrainianText Ukrainian text
      *
      * @return bool
      */
-    protected function checkForZghException($ukrainianText)
+    private static function checkForZghException($ukrainianText)
     {
         return (bool) mb_substr_count($ukrainianText, 'Зг') || (bool) mb_substr_count($ukrainianText, 'зг');
     }
