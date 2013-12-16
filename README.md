@@ -29,13 +29,9 @@ Add the following lines to your `composer.json` file and then run `php composer.
 }
 ```
 
-## Features
+## Available tranliteration methods
 
-This service provides a method for easy transliteration from ukrainian to english.
-
-## Only one available method now
-
-* From *Ukrainian* to *English*
+* Ukrainian => English
 
 ## Using
 
@@ -53,7 +49,6 @@ class Demo
     public function someAction($ukrainianText)
     {
         $transliterator = new Transliterator();
-
         $transliteratedText = $transliterator->fromUkrainianToEnglish($ukrainianText);
 
         // Other job...
@@ -62,7 +57,7 @@ class Demo
 ```
 
 - - -
-#### Few examples of *Ukrainian-to-English* transliteration
+### Few examples of *Ukrainian-to-English* transliteration
 
 <table>
     <thead>
