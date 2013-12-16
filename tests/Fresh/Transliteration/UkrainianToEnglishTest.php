@@ -10,17 +10,17 @@
 
 namespace Tests\Fresh\Transliteration;
 
-use Fresh\Transliteration\Transliterator;
+use Fresh\Transliteration\UkrainianToEnglish;
 
 /**
- * Transliterator Test
+ * UkrainianToEnglish Transliterator Test
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  */
-class TransliteratorTest extends \PHPUnit_Framework_TestCase
+class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var Transliterator
+     * @var UkrainianToEnglish
      */
     protected $transliterator;
 
@@ -29,30 +29,29 @@ class TransliteratorTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->transliterator = new Transliterator();
+        $this->transliterator = new UkrainianToEnglish();
     }
 
     /**
-     * Test transliteration from ukrainian to english
+     * Test transliteration from Ukrainian to English
      *
      * @param array $ukrainianText      Ukrainian text
      * @param array $transliteratedText Expected transliterated text
      *
      * @test
-     * @dataProvider transliterationFromUkrainianToEnglishDataProvider
+     * @dataProvider dataProvider
      */
     public function transliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
     {
-        $this->assertEquals($transliteratedText, $this->transliterator->fromUkrainianToEnglish($ukrainianText));
+        $this->assertEquals($transliteratedText, $this->transliterator->transliterate($ukrainianText));
     }
 
     /**
-     * Data provider for transliteration from ukrainian to english test
+     * Data provider for transliteration from Ukrainian to English
      *
-     * @static
      * @return array
      */
-    public function transliterationFromUkrainianToEnglishDataProvider()
+    public function dataProvider()
     {
         return [
             // Ukrainian alphabet

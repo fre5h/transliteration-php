@@ -19,7 +19,7 @@ namespace Fresh\Transliteration;
  * @author Artem Genvald <genvaldartem@gmail.com>
  * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
  */
-class UkrainianToEnglish
+class UkrainianToEnglish implements TransliteratorInterface
 {
     /**
      * @var array Rules of transliteration from Ukrainian to English
@@ -101,7 +101,7 @@ class UkrainianToEnglish
      *
      * @return string
      */
-    public function __invoke($ukrainianText)
+    public function transliterate($ukrainianText)
     {
         $transliteratedText = '';
 

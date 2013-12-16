@@ -11,21 +11,16 @@
 namespace Fresh\Transliteration;
 
 /**
- * Transliterator
+ * Transliterator Interface
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  */
-class Transliterator
+interface TransliteratorInterface
 {
     /**
-     * Transliterate Ukrainian text to English
+     * Transliterate text
      *
-     * @param string $ukrainianText Ukrainian text
-     *
-     * @return string
+     * @param string $textToTransliterate Text to transliterate
      */
-    public function fromUkrainianToEnglish($ukrainianText)
-    {
-        return (new UkrainianToEnglish())->transliterate($ukrainianText);
-    }
+    public function transliterate($textToTransliterate);
 }

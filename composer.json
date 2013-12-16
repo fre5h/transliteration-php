@@ -4,7 +4,7 @@
     "keywords": ["transliteration", "transliterate", "ukrainian", "english"],
 
     "type": "library",
-    "homepage": "http://fre5h.github.io/",
+    "homepage": "https://github.com/fre5h/transliteration",
     "license": "MIT",
     "authors": [
         {
