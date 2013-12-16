@@ -1,5 +1,5 @@
-transliteration
-===============
+Transliteration library
+=======================
 
 Small PHP library for transliteration
 

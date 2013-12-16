@@ -11,7 +11,7 @@
 namespace Fresh\Transliteration;
 
 /**
- * Transliteration from Ukrainian to English
+ * Transliterator
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  */
@@ -26,6 +26,8 @@ class Transliterator
      */
     public function fromUkrainianToEnglish($ukrainianText)
     {
-        return UkrainianToEnglish::transliterate($ukrainianText);
+        $transliterator = new UkrainianToEnglish();
+
+        return $transliterator($ukrainianText);
     }
 }

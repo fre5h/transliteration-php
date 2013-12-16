@@ -11,13 +11,11 @@
 namespace Tests\Fresh\Transliteration;
 
 use Fresh\Transliteration\Transliterator;
-use Fresh\Transliteration\UkrainianToEnglish;
 
 /**
  * Transliterator Test
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
- * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
  */
 class TransliteratorTest extends \PHPUnit_Framework_TestCase
 {
@@ -57,7 +55,7 @@ class TransliteratorTest extends \PHPUnit_Framework_TestCase
     public function transliterationFromUkrainianToEnglishDataProvider()
     {
         return [
-            // Український алфавіт
+            // Ukrainian alphabet
             ['А', 'A'],
             ['Б', 'B'],
             ['В', 'V'],
@@ -125,7 +123,7 @@ class TransliteratorTest extends \PHPUnit_Framework_TestCase
             ['я', 'ia'],
             ['\'', ''],
 
-            // Приклади транслітерації взяті з постанови №55 Кабінету Міністрів України від 27 січня 2010 року
+            // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
             // Аа
             ['Алушта', 'Alushta'],
             ['Андрій', 'Andrii'],
