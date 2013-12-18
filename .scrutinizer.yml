@@ -25,5 +25,5 @@ tools:
         excluded_dirs: ["vendor"]
         enabled: true
     php_pdepend:
-        excluded_dirs: [vendor]
+        excluded_dirs: ["vendor", "tests"]
     php_loc: true

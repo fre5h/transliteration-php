@@ -43,7 +43,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
         <tr>
             <td>Ukrainian</td>
             <td>English</td>
-            <td>[Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010](http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF)</td>
+            <td>Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF</td>
         </tr>
     </tbody>
 </table>
