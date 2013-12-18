@@ -67,7 +67,7 @@ class Foo
 }
 ```
 
-## Few examples of *Ukrainian-to-English* transliteration
+### Few examples of *Ukrainian-to-English* transliteration
 
 <table>
     <thead>
