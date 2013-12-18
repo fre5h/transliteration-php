@@ -6,6 +6,8 @@ php:
 
 before_script:
   - composer install
+  - pear install --alldeps PHP_CodeSniffer
+  - phpenv rehash
   - phpcs --standard=PSR1 --ignore=/vendor ./
 
 script: phpunit
