@@ -15,9 +15,7 @@ Small PHP library for transliteration
 
 * PHP 5.4 *and later*
 
-## Installation
-
-### Install via Composer
+## Install via Composer
 
 Add the following lines to your `composer.json` file and then run `php composer.phar install` or `php composer.phar update`:
 
@@ -48,9 +46,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
     </tbody>
 </table>
 
-## Using
-
-### Examples
+## Example
 
 ```php
 <?php
@@ -71,7 +67,7 @@ class Foo
 }
 ```
 
-### Few examples of *Ukrainian-to-English* transliteration
+## Few examples of *Ukrainian-to-English* transliteration
 
 <table>
     <thead>
