@@ -24,7 +24,7 @@ class UkrainianToEnglish implements TransliteratorInterface
     /**
      * @var array Rules of transliteration from Ukrainian to English
      */
-    private $ukrainianToEnglishRules = [
+    private static $ukrainianToEnglishRules = [
         'А' => 'A',
         'Б' => 'B',
         'В' => 'V',
@@ -101,19 +101,19 @@ class UkrainianToEnglish implements TransliteratorInterface
      *
      * @return string
      */
-    public function transliterate($ukrainianText)
+    public static function transliterate($ukrainianText)
     {
         $transliteratedText = '';
 
         if (mb_strlen($ukrainianText) > 0) {
             // If found "Zgh|zgh" exception then replace it
-            if ($this->checkForZghException($ukrainianText)) {
+            if (self::checkForZghException($ukrainianText)) {
                 $ukrainianText = str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
             }
             // Transliteration is doing by rendering each letter
             $transliteratedText = str_replace(
-                array_keys($this->ukrainianToEnglishRules),
-                array_values($this->ukrainianToEnglishRules),
+                array_keys(self::$ukrainianToEnglishRules),
+                array_values(self::$ukrainianToEnglishRules),
                 $ukrainianText
             );
         }
@@ -128,7 +128,7 @@ class UkrainianToEnglish implements TransliteratorInterface
      *
      * @return bool
      */
-    private function checkForZghException($ukrainianText)
+    private static function checkForZghException($ukrainianText)
     {
         return (bool) mb_substr_count($ukrainianText, 'Зг') || (bool) mb_substr_count($ukrainianText, 'зг');
     }

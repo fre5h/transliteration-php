@@ -31,7 +31,20 @@ Add the following lines to your `composer.json` file and then run `php composer.
 
 ## Available tranliteration methods
 
-* Ukrainian => English
+<table>
+    <thead>
+        <tr>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ukrainian</td>
+            <td>English</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Using
 
@@ -40,23 +53,22 @@ Add the following lines to your `composer.json` file and then run `php composer.
 ```php
 <?php
 
-namespace Your\Application;
+namespace Acme;
 
 use Fresh\Transliteration\Transliterator;
 
-class Demo
+class Foo
 {
-    public function someAction($ukrainianText)
+    public function bar($text)
     {
         $transliterator = new Transliterator();
-        $transliteratedText = $transliterator->fromUkrainianToEnglish($ukrainianText);
+        $transliteratedText = $transliterator->ukToEn($text);
 
         // Other job...
     }
 }
 ```
 
-- - -
 ### Few examples of *Ukrainian-to-English* transliteration
 
 <table>

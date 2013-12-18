@@ -10,7 +10,7 @@
 
 namespace Tests\Fresh\Transliteration;
 
-use Fresh\Transliteration\UkrainianToEnglish;
+use Fresh\Transliteration\Transliterator;
 
 /**
  * UkrainianToEnglish Transliterator Test
@@ -20,7 +20,7 @@ use Fresh\Transliteration\UkrainianToEnglish;
 class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var UkrainianToEnglish
+     * @var Transliterator
      */
     protected $transliterator;
 
@@ -29,7 +29,7 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->transliterator = new UkrainianToEnglish();
+        $this->transliterator = new Transliterator();
     }
 
     /**
@@ -43,7 +43,7 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
      */
     public function transliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
     {
-        $this->assertEquals($transliteratedText, $this->transliterator->transliterate($ukrainianText));
+        $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }
 
     /**
@@ -121,6 +121,12 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['ю', 'iu'],
             ['я', 'ia'],
             ['\'', ''],
+            ['', ''],
+            ['-', '-'],
+            ['!', '!'],
+            [',', ','],
+            ['.', '.'],
+            [' ', ' '],
 
             // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
             // Аа
@@ -228,7 +234,10 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['Ярошенко',   'Yaroshenko'],
             ['Костянтин',  'Kostiantyn'],
             ['Знам\'янка', 'Znamianka'],
-            ['Феодосія',   'Feodosiia']
+            ['Феодосія',   'Feodosiia'],
+            // Some text
+            ['Добрий день', 'Dobryi den'],
+            ['Привіт світ!', 'Pryvit svit!']
         ];
     }
 }

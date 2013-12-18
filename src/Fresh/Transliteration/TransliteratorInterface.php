@@ -22,5 +22,5 @@ interface TransliteratorInterface
      *
      * @param string $textToTransliterate Text to transliterate
      */
-    public function transliterate($textToTransliterate);
+    public static function transliterate($textToTransliterate);
 }

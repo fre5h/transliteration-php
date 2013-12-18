@@ -24,8 +24,8 @@ class Transliterator
      *
      * @return string
      */
-    public function fromUkrainianToEnglish($ukrainianText)
+    public function ukToEn($ukrainianText)
     {
-        return (new UkrainianToEnglish())->transliterate($ukrainianText);
+        return UkrainianToEnglish::transliterate($ukrainianText);
     }
 }
