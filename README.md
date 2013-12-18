@@ -11,11 +11,11 @@ Small PHP library for transliteration
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/mini.png)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fre5h/transliteration/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-## Requirements
+### Requirements
 
 * PHP 5.4 *and later*
 
-## Install via Composer
+### Install via Composer
 
 Add the following lines to your `composer.json` file and then run `php composer.phar install` or `php composer.phar update`:
 
@@ -27,7 +27,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
 }
 ```
 
-## Available transliteration methods
+### Available transliteration methods
 
 <table>
     <thead>
@@ -46,7 +46,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
     </tbody>
 </table>
 
-## Example
+### Example
 
 ```php
 <?php
