@@ -24,7 +24,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
 ```json
 {
     "require": {
-        "fresh/transliteration": "dev-master"
+        "fresh/transliteration": "v1.0.1"
     }
 }
 ```
