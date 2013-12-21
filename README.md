@@ -39,8 +39,8 @@ Add the following lines to your `composer.json` file and then run `php composer.
     </thead>
     <tbody>
         <tr>
-            <td>![Ukrainian](/resources/images/ukraine-flag.png "Ukrainian") Ukrainian</td>
-            <td>![English](/resources/images/united-kingdom-flag.png "English") English</td>
+            <td><img src="/resources/images/ukraine-flag.png" alt="Ukrainian" /> Ukrainian</td>
+            <td><img src="/resources/images/united-kingdom-flag.png" alt="English" /> English</td>
             <td>Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF</td>
         </tr>
     </tbody>
@@ -75,8 +75,8 @@ class Foo
 <table>
     <thead>
         <tr>
-            <th>![Ukrainian](/resources/images/ukraine-flag.png "Ukrainian") Ukrainian text</th>
-            <th>![English](/resources/images/united-kingdom-flag.png "English") Transliterated text</th>
+            <th><img src="/resources/images/ukraine-flag.png" alt="Ukrainian" /> Ukrainian text</th>
+            <th><img src="/resources/images/united-kingdom-flag.png" alt="English" /> Transliterated text</th>
         </tr>
     </thead>
     <tbody>
