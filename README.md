@@ -22,7 +22,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
 ```json
 {
     "require": {
-        "fresh/transliteration": "v1.0.1"
+        "fresh/transliteration": "v1.0.2"
     }
 }
 ```
@@ -39,14 +39,14 @@ Add the following lines to your `composer.json` file and then run `php composer.
     </thead>
     <tbody>
         <tr>
-            <td>Ukrainian</td>
-            <td>English</td>
+            <td>![Ukrainian](/resources/images/ukraine-flag.png "Ukrainian") Ukrainian</td>
+            <td>![English](/resources/images/united-kingdom-flag.png "English") English</td>
             <td>Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF</td>
         </tr>
     </tbody>
 </table>
 
-### Example
+### Using
 
 ```php
 <?php
@@ -54,26 +54,29 @@ Add the following lines to your `composer.json` file and then run `php composer.
 namespace Acme;
 
 use Fresh\Transliteration\Transliterator;
+use Fresh\Transliteration\UkrainianToEnglish;
 
 class Foo
 {
     public function bar($text)
     {
+        // You can use in this way
         $transliterator = new Transliterator();
         $transliteratedText = $transliterator->ukToEn($text);
 
-        // Other job...
+        // Or like this
+        $transliteratedText = UkrainianToEnglish::transliterate($ukrainianText);
     }
 }
 ```
 
-### Few examples of *Ukrainian-to-English* transliteration
+### Some examples of *Ukrainian-to-English* transliteration
 
 <table>
     <thead>
         <tr>
-            <th>Ukrainian text</th>
-            <th>Transliterated text</th>
+            <th>![Ukrainian](/resources/images/ukraine-flag.png "Ukrainian") Ukrainian text</th>
+            <th>![English](/resources/images/united-kingdom-flag.png "English") Transliterated text</th>
         </tr>
     </thead>
     <tbody>
