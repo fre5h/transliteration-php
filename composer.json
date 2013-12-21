@@ -1,6 +1,6 @@
 {
     "name": "fresh/transliteration",
-    "description": "Small PHP library for transliteration",
+    "description": "Small PHP library for transliteration.",
     "keywords": ["transliteration", "transliterate", "ukrainian", "english"],
 
     "type": "library",
@@ -18,11 +18,11 @@
         "php": ">=5.4.0"
     },
 
+    "minimum-stability": "stable",
+
     "autoload": {
         "psr-0": {
             "Fresh\\Transliteration": "src/"
         }
-    },
-
-    "minimum-stability": "stable"
+    }
 }
