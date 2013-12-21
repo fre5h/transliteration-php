@@ -39,10 +39,21 @@ Add the following lines to your `composer.json` file and then run `php composer.
     </thead>
     <tbody>
         <tr>
-            <td><img src="/resources/images/ukraine-flag.png" align="middle" alt="Ukrainian" title="Ukrainian" /> Ukrainian</td>
-            <td><img src="/resources/images/united-kingdom-flag.png" align="middle" alt="English" title="English" /> English</td>
-            <td>Resolution of the Cabinet of Ministers of Ukraine №55<br />
-                dated January 27, 2010<br />
+            <td>
+                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" />
+                <br />
+                Ukrainian
+            </td>
+            <td>
+                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
+                English
+                <br />
+            </td>
+            <td>
+                Resolution of the Cabinet of Ministers of Ukraine №55
+                <br />
+                dated January 27, 2010
+                <br />
                 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
             </td>
         </tr>
@@ -78,8 +89,12 @@ class Foo
 <table>
     <thead>
         <tr>
-            <th><img src="/resources/images/ukraine-flag.png" align="middle" alt="Ukrainian" title="Ukrainian" /> Ukrainian text</th>
-            <th><img src="/resources/images/united-kingdom-flag.png" align="middle" alt="English" title="English" /> Transliterated text</th>
+            <th>
+                <img src="/resources/images/ukraine-flag.png" align="bottom" alt="Ukrainian" title="Ukrainian" /> Ukrainian text
+            </th>
+            <th>
+                <img src="/resources/images/united-kingdom-flag.png" align="bottom" alt="English" title="English" /> Transliterated text
+            </th>
         </tr>
     </thead>
     <tbody>
