@@ -90,10 +90,10 @@ class Foo
     <thead>
         <tr>
             <th>
-                <img src="/resources/images/ukraine-flag.png" align="bottom" alt="Ukrainian" title="Ukrainian" /> Ukrainian text
+                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" /> Ukrainian text
             </th>
             <th>
-                <img src="/resources/images/united-kingdom-flag.png" align="bottom" alt="English" title="English" /> Transliterated text
+                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" /> Transliterated text
             </th>
         </tr>
     </thead>
