@@ -46,8 +46,8 @@ Add the following lines to your `composer.json` file and then run `php composer.
             </td>
             <td>
                 <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
-                English
                 <br />
+                English
             </td>
             <td>
                 Resolution of the Cabinet of Ministers of Ukraine №55
@@ -90,10 +90,14 @@ class Foo
     <thead>
         <tr>
             <th>
-                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" /> Ukrainian text
+                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" />
+                <br />
+                Ukrainian text
             </th>
             <th>
-                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" /> Transliterated text
+                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
+                <br />
+                Transliterated text
             </th>
         </tr>
     </thead>
