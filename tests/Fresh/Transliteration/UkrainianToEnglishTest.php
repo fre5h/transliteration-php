@@ -39,7 +39,8 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
      * @param array $transliteratedText Expected transliterated text
      *
      * @test
-     * @covers \Fresh\Transliteration\Transliterator::ukToEn
+     * @covers \Fresh\Transliteration\Transliterator
+     * @covers \Fresh\Transliteration\UkrainianToEnglish
      * @dataProvider dataProvider
      */
     public function transliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
