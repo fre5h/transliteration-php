@@ -11,7 +11,6 @@ Small PHP library for transliteration
 [![Dependency Status](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055/badge.png)](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055)
 [![Total Downloads](https://poser.pugx.org/fresh/transliteration/downloads.png)](https://packagist.org/packages/fresh/transliteration)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/mini.png)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fre5h/transliteration/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ### Requirements
 
