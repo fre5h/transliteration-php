@@ -27,3 +27,4 @@ tools:
     php_pdepend:
         excluded_dirs: ["vendor", "tests"]
     php_loc: true
+    php_analyzer: true
