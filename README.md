@@ -20,8 +20,7 @@ Small PHP library for transliteration
 
 ### Install via Composer
 
-Add the following lines to your `composer.json` file and then run `php composer.phar install` or `php composer.phar update`:
-
+Add the following lines into your `composer.json` file:
 ```json
 {
     "require": {
@@ -29,6 +28,7 @@ Add the following lines to your `composer.json` file and then run `php composer.
     }
 }
 ```
+And then run `php composer.phar update`
 
 ### Available transliteration methods
 
