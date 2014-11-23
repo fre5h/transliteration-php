@@ -1,36 +1,28 @@
-Transliteration
-===============
+# Transliteration
 
-Small PHP library for transliteration
+Small PHP library for transliteration.
 
-[![License](https://poser.pugx.org/fresh/transliteration/license.png)](https://packagist.org/packages/fresh/transliteration)
-[![Build Status](https://secure.travis-ci.org/fre5h/transliteration.png?branch=master)](https://travis-ci.org/fre5h/transliteration)
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/quality-score.png?s=e04dee642516971b6922584ae403b923d9dd8aa3)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
+* Scrutinizer [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/quality-score.png?s=e04dee642516971b6922584ae403b923d9dd8aa3)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
+[![Build Status](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/build.png?b=master)](https://scrutinizer-ci.com/g/fre5h/transliteration/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/coverage.png?s=741891f1f3d6f39dc01eb6d1b2199f0816f05b34)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
+* Travis CI [![Build Status](https://secure.travis-ci.org/fre5h/transliteration.png?branch=master)](https://travis-ci.org/fre5h/transliteration)
+* Packagist.org [![License](https://poser.pugx.org/fresh/transliteration/license.png)](https://packagist.org/packages/fresh/transliteration)
 [![Latest Stable Version](https://poser.pugx.org/fresh/transliteration/v/stable.png)](https://packagist.org/packages/fresh/transliteration)
 [![Total Downloads](https://poser.pugx.org/fresh/transliteration/downloads.png)](https://packagist.org/packages/fresh/transliteration)
-[![Dependency Status](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055/badge.svg)](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055)
+* VersionEye [![Dependency Status](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055/badge.svg)](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055)
 [![Reference Status](https://www.versioneye.com/php/fresh:transliteration/reference_badge.svg)](https://www.versioneye.com/php/fresh:transliteration/references)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/big.png)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
 
-### Requirements
+## Requirements
 
 * PHP 5.4 *and later*
 
-### Install via Composer
+## Install via Composer
 
-Add the following lines into your `composer.json` file:
-```json
-{
-    "require": {
-        "fresh/transliteration": "v1.0.2"
-    }
-}
-```
-And then run `php composer.phar update`
+```php composer.phar require fresh/transliteration='v1.1.0'```
 
-### Available transliteration methods
+## Available transliteration methods
 
 <table>
     <thead>
@@ -61,7 +53,7 @@ And then run `php composer.phar update`
     </tbody>
 </table>
 
-### Using
+## Using
 
 ```php
 <?php
@@ -85,7 +77,7 @@ class Foo
 }
 ```
 
-### Some examples of *Ukrainian-to-English* transliteration
+## Some examples of *Ukrainian-to-English* transliteration
 
 <table>
     <thead>

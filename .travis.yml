@@ -6,12 +6,13 @@ php:
   - 5.6
 
 before_script:
-  - composer install
+  - composer install --dev
   - pear install --alldeps PHP_CodeSniffer
   - phpenv rehash
-  - phpcs --standard=PSR1 --ignore=/vendor ./
 
-script: phpunit
+script:
+  - phpunit
+  - phpcs --standard=PSR2 --ignore=/vendor ./
 
 notifications:
   email:

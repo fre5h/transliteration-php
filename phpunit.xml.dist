@@ -13,13 +13,13 @@
 >
     <testsuites>
         <testsuite name="Transliteration Test Suite">
-            <directory>./tests/Fresh/Transliteration/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>./src/Fresh/Transliteration/</directory>
+            <directory>./src/</directory>
         </whitelist>
     </filter>
 </phpunit>
