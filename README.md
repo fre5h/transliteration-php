@@ -11,6 +11,7 @@ Small PHP library for transliteration.
 [![Total Downloads](https://poser.pugx.org/fresh/transliteration/downloads.png)](https://packagist.org/packages/fresh/transliteration)
 * VersionEye [![Dependency Status](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055/badge.svg)](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055)
 [![Reference Status](https://www.versioneye.com/php/fresh:transliteration/reference_badge.svg)](https://www.versioneye.com/php/fresh:transliteration/references)
+** HHVM [![HHVM Status](http://hhvm.h4cc.de/badge/fresh/transliteration.svg)](http://hhvm.h4cc.de/package/fresh/transliteration)
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/big.png)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
 
