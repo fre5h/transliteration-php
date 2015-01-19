@@ -7,20 +7,20 @@ php:
   - hhvm
   
 matrix:
-    allow_failures:
-        - php: hhvm
+  allow_failures:
+    - php: hhvm
         
 before_install:
-  sudo pip install codecov
+  - sudo pip install codecov
 
 before_script:
   - composer install --dev
 
 script:
-  - phpunit
+  - phpunit --coverage-clover=coverage.xml
   
 after_success:
-  codecov  
+  - codecov  
 
 notifications:
   email:
