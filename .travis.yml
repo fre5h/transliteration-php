@@ -12,12 +12,9 @@ matrix:
 
 before_script:
   - composer install --dev
-  - pear install --alldeps PHP_CodeSniffer
-  - phpenv rehash
 
 script:
   - phpunit
-  - phpcs --standard=PSR2 --ignore=/vendor ./
 
 notifications:
   email:
