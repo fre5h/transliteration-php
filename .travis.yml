@@ -8,13 +8,19 @@ php:
   
 matrix:
     allow_failures:
-        - php: hhvm  
+        - php: hhvm
+        
+before_install:
+  sudo pip install codecov
 
 before_script:
   - composer install --dev
 
 script:
   - phpunit
+  
+after_success:
+  codecov  
 
 notifications:
   email:
