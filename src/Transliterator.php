@@ -28,4 +28,16 @@ class Transliterator
     {
         return UkrainianToEnglish::transliterate($ukrainianText);
     }
+
+    /**
+     * Transliterate Russian text to English
+     *
+     * @param string $russianText Russian text
+     *
+     * @return string
+     */
+    public function ruToEn($russianText)
+    {
+        return RussianToEnglish::transliterate($russianText);
+    }
 }
