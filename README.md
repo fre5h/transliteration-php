@@ -1,5 +1,7 @@
 # Transliteration
 
+[![Join the chat at https://gitter.im/fre5h/transliteration](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fre5h/transliteration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Small PHP library for transliteration.
 
 * Scrutinizer [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/quality-score.png?s=e04dee642516971b6922584ae403b923d9dd8aa3)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
