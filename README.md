@@ -9,7 +9,7 @@ Small PHP library for transliteration.
 * Packagist.org [![License](https://poser.pugx.org/fresh/transliteration/license.png)](https://packagist.org/packages/fresh/transliteration)
 [![Latest Stable Version](https://poser.pugx.org/fresh/transliteration/v/stable.png)](https://packagist.org/packages/fresh/transliteration)
 [![Total Downloads](https://poser.pugx.org/fresh/transliteration/downloads.png)](https://packagist.org/packages/fresh/transliteration)
-* VersionEye [![Dependency Status](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055/badge.svg)](https://www.versioneye.com/user/projects/52ea18a3ec13755c2f000055)
+* VersionEye [![Dependency Status](https://www.versioneye.com/user/projects/550403dd4a10647744000008/badge.svg)](https://www.versioneye.com/user/projects/550403dd4a10647744000008)
 [![Reference Status](https://www.versioneye.com/php/fresh:transliteration/reference_badge.svg)](https://www.versioneye.com/php/fresh:transliteration/references)
 * HHVM [![HHVM Status](http://hhvm.h4cc.de/badge/fresh/transliteration.svg)](http://hhvm.h4cc.de/package/fresh/transliteration)
 * CodeCov [![codecov.io](https://codecov.io/github/fre5h/transliteration/coverage.svg?branch=master)](https://codecov.io/github/fre5h/transliteration?branch=master)
