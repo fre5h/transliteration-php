@@ -1,53 +1,12 @@
+checks:
+  php:
+    code_rating: true
+    duplication: true
+
 filter:
-    excluded_paths: [vendor/*]
+  excluded_paths:
+    - vendor/*
+
 
 before_commands:
-  - "composer install --no-dev --prefer-source"
-
-tools:
-    php_code_sniffer:
-        extensions:
-            - php
-        command: phpcs
-        enabled: true
-        filter:
-            paths: ["src/*", "tests/*"]
-            excluded_paths: ["vendor/*"]
-        config:
-            standard: PSR2
-
-    external_code_coverage:
-        timeout: 600
-
-    php_code_coverage:
-        enabled: true
-
-    php_mess_detector:
-        enabled: true
-        config:
-            ruleset: phpmd.xml.dist
-            design_rules: { eval_expression: false }
-        filter:
-            paths: ["src/*"]
-
-    php_cpd:
-        enabled: true
-        command: phpcpd
-        min_lines: 5
-        min_tokens: 70
-        names:
-            - '*.php'
-        excluded_dirs: ["vendor", "tests"]
-
-    php_pdepend:
-        enabled: true
-        excluded_dirs: ["vendor", "tests"]
-
-    php_loc:
-        enabled: true
-        excluded_dirs: ["vendor", "tests"]
-
-    php_analyzer:
-        enabled: true
-
-    sensiolabs_security_checker: true
+  - "composer install --prefer-source"

@@ -1,22 +1,17 @@
 # Transliteration
 
-[![Join the chat at https://gitter.im/fre5h/transliteration](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fre5h/transliteration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+PHP library for transliteration.
 
-Small PHP library for transliteration.
-
-* Scrutinizer [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/quality-score.png?s=e04dee642516971b6922584ae403b923d9dd8aa3)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
-[![Build Status](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/build.png?b=master)](https://scrutinizer-ci.com/g/fre5h/transliteration/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/fre5h/transliteration/badges/coverage.png?s=741891f1f3d6f39dc01eb6d1b2199f0816f05b34)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
-* Travis CI [![Build Status](https://secure.travis-ci.org/fre5h/transliteration.png?branch=master)](https://travis-ci.org/fre5h/transliteration)
-* Packagist.org [![License](https://poser.pugx.org/fresh/transliteration/license.png)](https://packagist.org/packages/fresh/transliteration)
-[![Latest Stable Version](https://poser.pugx.org/fresh/transliteration/v/stable.png)](https://packagist.org/packages/fresh/transliteration)
-[![Total Downloads](https://poser.pugx.org/fresh/transliteration/downloads.png)](https://packagist.org/packages/fresh/transliteration)
-* VersionEye [![Dependency Status](https://www.versioneye.com/user/projects/550403dd4a10647744000008/badge.svg)](https://www.versioneye.com/user/projects/550403dd4a10647744000008)
-[![Reference Status](https://www.versioneye.com/php/fresh:transliteration/reference_badge.svg)](https://www.versioneye.com/php/fresh:transliteration/references)
-* HHVM [![HHVM Status](http://hhvm.h4cc.de/badge/fresh/transliteration.svg)](http://hhvm.h4cc.de/package/fresh/transliteration)
-* CodeCov [![codecov.io](https://codecov.io/github/fre5h/transliteration/coverage.svg?branch=master)](https://codecov.io/github/fre5h/transliteration?branch=master)
-
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/big.png)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
+[![Build Status](https://img.shields.io/travis/fre5h/transliteration.svg?style=flat-square)](https://travis-ci.org/fre5h/transliteration)
+[![CodeCov](https://img.shields.io/codecov/c/github/fre5h/transliteration.svg?style=flat-square)](https://codecov.io/github/fre5h/transliteration)
+[![License](https://img.shields.io/packagist/l/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
+[![Latest Stable Version](https://img.shields.io/packagist/v/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
+[![Total Downloads](https://img.shields.io/packagist/dt/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
+[![Dependency Status](https://www.versioneye.com/user/projects/550403dd4a10647744000008/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/550403dd4a10647744000008)
+[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ad4d26d5-cd6b-4fa6-8287-7d74234a2106.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
+[![HHVM Status](http://hhvm.h4cc.de/badge/fresh/transliteration.svg)](http://hhvm.h4cc.de/package/fresh/transliteration)
+[![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Requirements
 
