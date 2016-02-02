@@ -29,7 +29,7 @@ class RussianToEnglish implements TransliteratorInterface
         'в' => 'v',
         'г' => 'g',
         'д' => 'd',
-        'e' => 'e',
+        'е' => 'e',
         'ё' => 'e',
         'ж' => 'zh',
         'з' => 'z',
