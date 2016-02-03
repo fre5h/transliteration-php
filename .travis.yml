@@ -11,10 +11,12 @@ allow_failures:
 
 before_script:
   - composer self-update
-  - composer install --dev --prefer-dist --no-interaction
+  
+install:
+  - composer install --dev --no-interaction --prefer-dist
 
 script:
-  - ./vendor/bin/phpcs ./ -p --encoding=utf-8 --extensions=php --ignore=vendor --standard=./vendor/escapestudios/symfony2-coding-standard/Symfony2
+  - ./vendor/bin/phpcs ./ -p --encoding=utf-8 --extensions=php --ignore=vendor --standard=PSR2
   - ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=coverage.xml
 
 after_success:
