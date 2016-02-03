@@ -51,9 +51,9 @@ class RussianToEnglish implements TransliteratorInterface
         'ч' => 'ch',
         'ш' => 'sh',
         'щ' => 'sht',
-        'ь' => '\'',
+        'ь' => '',
         'ы' => 'y',
-        'ъ' => '\'',
+        'ъ' => '',
         'ю' => 'yu',
         'я' => 'ya',
         'А' => 'A',
@@ -82,12 +82,12 @@ class RussianToEnglish implements TransliteratorInterface
         'Ч' => 'Ch',
         'Ш' => 'Sh',
         'Щ' => 'Sht',
-        'Ь' => '\'',
+        'Ь' => '',
         'Ы' => 'Y',
-        'Ъ' => '\'',
+        'Ъ' => '',
         'Ю' => 'Yu',
         'Я' => 'Ya',
-        '\'' => ''
+        "'" => '',
     ];
 
     /**

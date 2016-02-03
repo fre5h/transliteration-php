@@ -239,7 +239,7 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['Феодосія',   'Feodosiia'],
             // Some text
             ['Добрий день', 'Dobryi den'],
-            ['Привіт світ!', 'Pryvit svit!']
+            ['Привіт світ!', 'Pryvit svit!'],
         ];
     }
 }

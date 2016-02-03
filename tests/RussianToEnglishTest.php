@@ -8,7 +8,9 @@
  * file that was distributed with this source code.
  */
 namespace Tests\Fresh\Transliteration;
+
 use Fresh\Transliteration\Transliterator;
+
 /**
  * RussianToEnglish Transliterator Test
  *
@@ -20,6 +22,7 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
      * @var Transliterator
      */
     protected $transliterator;
+
     /**
      * Set up environment
      */
@@ -27,21 +30,23 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
     {
         $this->transliterator = new Transliterator();
     }
+
     /**
      * Test transliteration from Russian to English
      *
-     * @param array $russianText      Russian text
+     * @param array $russianText        Russian text
      * @param array $transliteratedText Expected transliterated text
      *
      * @test
-     * @covers \Fresh\Transliteration\Transliterator
-     * @covers \Fresh\Transliteration\RussianToEnglish
+     * @covers       \Fresh\Transliteration\Transliterator
+     * @covers       \Fresh\Transliteration\RussianToEnglish
      * @dataProvider dataProvider
      */
     public function transliterationFromRussianToEnglish($russianText, $transliteratedText)
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
     }
+
     /**
      * Data provider for transliteration from Russian to English
      *
@@ -77,10 +82,10 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['ц', 'ts'],
             ['ч', 'ch'],
             ['ш', 'sh'],
-            ['щ', 'sht'], 
-            ['ь', '\''],
+            ['щ', 'sht'],
+            ['ь', ''],
             ['ы', 'y'],
-            ['ъ', '\''],
+            ['ъ', ''],
             ['ю', 'yu'],
             ['я', 'ya'],
             ['А', 'A'],
@@ -109,9 +114,9 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['Ч', 'Ch'],
             ['Ш', 'Sh'],
             ['Щ', 'Sht'],
-            ['Ь', '\''],
-            ['Ы','Y]',
-            ['Ъ','\''],
+            ['Ь', ''],
+            ['Ы', 'Y'],
+            ['Ъ', ''],
             ['Ю', 'Yu'],
             ['Я', 'Ya'],
         ];

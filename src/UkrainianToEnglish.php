@@ -91,7 +91,7 @@ class UkrainianToEnglish implements TransliteratorInterface
         'ь'  => '',
         'ю' => 'iu',
         'я' => 'ia',
-        '\'' => ''
+        '\'' => '',
     ];
 
     /**
