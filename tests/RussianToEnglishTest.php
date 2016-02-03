@@ -7,11 +7,8 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 namespace Tests\Fresh\Transliteration;
-
 use Fresh\Transliteration\Transliterator;
-
 /**
  * RussianToEnglish Transliterator Test
  *
@@ -23,7 +20,6 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
      * @var Transliterator
      */
     protected $transliterator;
-
     /**
      * Set up environment
      */
@@ -31,7 +27,6 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
     {
         $this->transliterator = new Transliterator();
     }
-
     /**
      * Test transliteration from Russian to English
      *
@@ -47,7 +42,6 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
     }
-
     /**
      * Data provider for transliteration from Russian to English
      *
@@ -62,7 +56,7 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['в', 'v'],
             ['г', 'g'],
             ['д', 'd'],
-            ['e', 'e'],
+            ['е', 'e'],
             ['ё', 'e'],
             ['ж', 'zh'],
             ['з', 'z'],
@@ -83,8 +77,10 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['ц', 'ts'],
             ['ч', 'ch'],
             ['ш', 'sh'],
-            ['щ', 'sht'],
-            ['ъ', 'ie'],
+            ['щ', 'sht'], 
+            ['ь', '\''],
+            ['ы', 'y'],
+            ['ъ', '\''],
             ['ю', 'yu'],
             ['я', 'ya'],
             ['А', 'A'],
@@ -113,7 +109,9 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['Ч', 'Ch'],
             ['Ш', 'Sh'],
             ['Щ', 'Sht'],
-            ['Ъ', 'IE'],
+            ['Ь', '\''],
+            ['Ы','Y]',
+            ['Ъ','\''],
             ['Ю', 'Yu'],
             ['Я', 'Ya'],
         ];
