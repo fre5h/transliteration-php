@@ -124,3 +124,7 @@ class Foo
         </tr>
     </tbody>
 </table>
+
+## Contributing
+
+See [CONTRIBUTING](https://github.com/fre5h/transliteration/blob/master/CONTRIBUTING.md) file.
