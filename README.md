@@ -11,7 +11,7 @@ PHP library for transliteration.
 [![Dependency Status](https://www.versioneye.com/user/projects/550403dd4a10647744000008/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/550403dd4a10647744000008)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ad4d26d5-cd6b-4fa6-8287-7d74234a2106.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
 [![HHVM](https://img.shields.io/hhvm/fresh/transliteration.svg?style=flat-square)](http://hhvm.h4cc.de/package/fresh/transliteration)
-[![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration)
 
 ## Requirements
 
