@@ -8,9 +8,8 @@ PHP library for transliteration.
 [![License](https://img.shields.io/packagist/l/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Latest Stable Version](https://img.shields.io/packagist/v/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Total Downloads](https://img.shields.io/packagist/dt/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
-[![Dependency Status](https://www.versioneye.com/user/projects/550403dd4a10647744000008/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/550403dd4a10647744000008)
+[![Dependency Status](https://www.versioneye.com/user/projects/57b5b95e1dcdc900451877ef/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57b5b95e1dcdc900451877ef)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ad4d26d5-cd6b-4fa6-8287-7d74234a2106.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
-[![HHVM](https://img.shields.io/hhvm/fresh/transliteration.svg?style=flat-square)](http://hhvm.h4cc.de/package/fresh/transliteration)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration)
 
 ## Requirements
