@@ -6,6 +6,9 @@ enabled:
   - ordered_class_elements
   - unalign_double_arrow
 
+disabled:
+  - align_double_arrow
+
 finder:
     exclude:
         - "Tests"
