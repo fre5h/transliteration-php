@@ -19,7 +19,7 @@ PHP library for transliteration.
 
 ## Install via Composer
 
-```php composer.phar require fresh/transliteration='v1.1.0'```
+```php composer.phar require fresh/transliteration='~1.1'```
 
 ## Available transliteration methods
 
