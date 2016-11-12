@@ -11,9 +11,9 @@
 namespace Fresh\Transliteration;
 
 /**
- * Transliteration from Russian to English
+ * Transliteration from Russian to English.
  *
- * According to the rules of transliteration
+ * According to the rules of transliteration.
  *
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  * @see    http://www.ufms.spb.ru/desc/pravila-transliteracii-dind-1009.html
@@ -21,7 +21,7 @@ namespace Fresh\Transliteration;
 class RussianToEnglish implements TransliteratorInterface
 {
     /**
-     * @var array Rules of transliteration from Russian to English
+     * @var array
      */
     private static $russianToEnglishRules = [
         'а' => 'a',
@@ -91,9 +91,9 @@ class RussianToEnglish implements TransliteratorInterface
     ];
 
     /**
-     * Transliterate Russian text to English
+     * Transliterate Russian text to English.
      *
-     * @param string $russianText Russian text
+     * @param string $russianText
      *
      * @return string
      */

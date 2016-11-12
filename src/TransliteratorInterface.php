@@ -11,16 +11,16 @@
 namespace Fresh\Transliteration;
 
 /**
- * Transliterator Interface
+ * Transliterator Interface.
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  */
 interface TransliteratorInterface
 {
     /**
-     * Transliterate text
+     * Transliterate text.
      *
-     * @param string $textToTransliterate Text to transliterate
+     * @param string $textToTransliterate
      */
     public static function transliterate($textToTransliterate);
 }

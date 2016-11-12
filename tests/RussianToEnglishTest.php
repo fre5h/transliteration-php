@@ -12,46 +12,28 @@ namespace Tests\Fresh\Transliteration;
 use Fresh\Transliteration\Transliterator;
 
 /**
- * RussianToEnglish Transliterator Test
+ * RussianToEnglish Transliterator Test.
  *
+ * @author Artem Genvald <mvilshansky@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  */
 class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
 {
-    /**
-     * @var Transliterator
-     */
     protected $transliterator;
 
-    /**
-     * Set up environment
-     */
     public function setUp()
     {
         $this->transliterator = new Transliterator();
     }
 
     /**
-     * Test transliteration from Russian to English
-     *
-     * @param array $russianText        Russian text
-     * @param array $transliteratedText Expected transliterated text
-     *
-     * @test
-     * @covers       \Fresh\Transliteration\Transliterator
-     * @covers       \Fresh\Transliteration\RussianToEnglish
      * @dataProvider dataProvider
      */
-    public function transliterationFromRussianToEnglish($russianText, $transliteratedText)
+    public function testTransliterationFromRussianToEnglish($russianText, $transliteratedText)
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
     }
 
-    /**
-     * Data provider for transliteration from Russian to English
-     *
-     * @return array
-     */
     public function dataProvider()
     {
         return [

@@ -11,10 +11,10 @@
 namespace Fresh\Transliteration;
 
 /**
- * Transliteration from Ukrainian to English
+ * Transliteration from Ukrainian to English.
  *
  * According to the rules of transliteration, that are described in the resolution
- * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
+ * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010.
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
@@ -22,7 +22,7 @@ namespace Fresh\Transliteration;
 class UkrainianToEnglish implements TransliteratorInterface
 {
     /**
-     * @var array Rules of transliteration from Ukrainian to English
+     * @var array
      */
     private static $ukrainianToEnglishRules = [
         'А' => 'A',
@@ -88,16 +88,16 @@ class UkrainianToEnglish implements TransliteratorInterface
         'ч' => 'ch',
         'ш' => 'sh',
         'щ' => 'shch',
-        'ь'  => '',
+        'ь' => '',
         'ю' => 'iu',
         'я' => 'ia',
         '\'' => '',
     ];
 
     /**
-     * Transliterate Ukrainian text to English
+     * Transliterate Ukrainian text to English.
      *
-     * @param string $ukrainianText Ukrainian text
+     * @param string $ukrainianText
      *
      * @return string
      */
@@ -122,9 +122,9 @@ class UkrainianToEnglish implements TransliteratorInterface
     }
 
     /**
-     * Check Ukrainian text for "Zgh|zgh" exception
+     * Check Ukrainian text for "Zgh|zgh" exception.
      *
-     * @param string $ukrainianText Ukrainian text
+     * @param string $ukrainianText
      *
      * @return bool
      */
