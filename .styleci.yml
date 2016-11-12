@@ -4,6 +4,7 @@ enabled:
   - combine_consecutive_unsets
   - linebreak_after_opening_tag
   - ordered_class_elements
+  - unalign_double_arrow
 
 finder:
     exclude:

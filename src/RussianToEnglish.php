@@ -15,8 +15,10 @@ namespace Fresh\Transliteration;
  *
  * According to the rules of transliteration.
  *
+ * @author Artem Genvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
- * @see    http://www.ufms.spb.ru/desc/pravila-transliteracii-dind-1009.html
+ *
+ * @see http://www.ufms.spb.ru/desc/pravila-transliteracii-dind-1009.html
  */
 class RussianToEnglish implements TransliteratorInterface
 {

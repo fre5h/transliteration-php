@@ -17,7 +17,8 @@ namespace Fresh\Transliteration;
  * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010.
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
- * @see    http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
+ *
+ * @see http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
  */
 class UkrainianToEnglish implements TransliteratorInterface
 {
