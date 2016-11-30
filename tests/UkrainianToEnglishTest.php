@@ -29,7 +29,7 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider dataProvider
      */
-    public function transliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
+    public function testTransliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }
