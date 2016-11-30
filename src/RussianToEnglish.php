@@ -17,6 +17,7 @@ namespace Fresh\Transliteration;
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
+ * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
  *
  * @see http://www.ufms.spb.ru/desc/pravila-transliteracii-dind-1009.html
  */
@@ -56,6 +57,7 @@ class RussianToEnglish implements TransliteratorInterface
         'ь' => '',
         'ы' => 'y',
         'ъ' => '',
+        'э' => 'e',
         'ю' => 'yu',
         'я' => 'ya',
         'А' => 'A',
@@ -87,6 +89,7 @@ class RussianToEnglish implements TransliteratorInterface
         'Ь' => '',
         'Ы' => 'Y',
         'Ъ' => '',
+        'Э' => 'E',
         'Ю' => 'Yu',
         'Я' => 'Ya',
         "'" => '',

@@ -17,6 +17,7 @@ use Fresh\Transliteration\Transliterator;
  *
  * @author Artem Genvald <mvilshansky@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
+ * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
  */
 class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
 {
@@ -69,6 +70,7 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['ь', ''],
             ['ы', 'y'],
             ['ъ', ''],
+            ['э', 'e'],
             ['ю', 'yu'],
             ['я', 'ya'],
             ['А', 'A'],
@@ -100,6 +102,7 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['Ь', ''],
             ['Ы', 'Y'],
             ['Ъ', ''],
+            ['Э', 'E'],
             ['Ю', 'Yu'],
             ['Я', 'Ya'],
         ];
