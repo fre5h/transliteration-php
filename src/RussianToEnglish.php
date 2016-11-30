@@ -96,8 +96,6 @@ class RussianToEnglish implements TransliteratorInterface
     ];
 
     /**
-     * Transliterate Russian text to English.
-     *
      * @param string $russianText
      *
      * @return string

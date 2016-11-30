@@ -18,8 +18,6 @@ namespace Fresh\Transliteration;
 class Transliterator
 {
     /**
-     * Transliterate Ukrainian text to English.
-     *
      * @param string $ukrainianText
      *
      * @return string
@@ -30,8 +28,6 @@ class Transliterator
     }
 
     /**
-     * Transliterate Russian text to English.
-     *
      * @param string $russianText
      *
      * @return string

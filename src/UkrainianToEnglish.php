@@ -96,8 +96,6 @@ class UkrainianToEnglish implements TransliteratorInterface
     ];
 
     /**
-     * Transliterate Ukrainian text to English.
-     *
      * @param string $ukrainianText
      *
      * @return string
@@ -123,8 +121,6 @@ class UkrainianToEnglish implements TransliteratorInterface
     }
 
     /**
-     * Check Ukrainian text for "Zgh|zgh" exception.
-     *
      * @param string $ukrainianText
      *
      * @return bool

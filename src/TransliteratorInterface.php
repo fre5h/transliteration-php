@@ -18,8 +18,6 @@ namespace Fresh\Transliteration;
 interface TransliteratorInterface
 {
     /**
-     * Transliterate text.
-     *
      * @param string $textToTransliterate
      */
     public static function transliterate($textToTransliterate);
