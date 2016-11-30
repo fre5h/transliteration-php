@@ -17,7 +17,7 @@ use Fresh\Transliteration\Transliterator;
  *
  * @author Artem Genvald <mvilshansky@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
- * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>        
+ * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
  */
 class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
 {
