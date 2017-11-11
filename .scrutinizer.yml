@@ -4,9 +4,11 @@ checks:
     duplication: true
 
 filter:
+  paths:
+    - src/
   excluded_paths:
-    - vendor/*
-    - tests/*
+    - vendor/
+    - tests/
 
 before_commands:
   - "composer install --prefer-dist"
