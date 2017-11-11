@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -22,9 +22,7 @@ namespace Fresh\Transliteration;
  */
 class UkrainianToEnglish implements TransliteratorInterface
 {
-    /**
-     * @var array
-     */
+    /** @var array */
     private static $ukrainianToEnglishRules = [
         'А' => 'A',
         'Б' => 'B',
@@ -100,16 +98,14 @@ class UkrainianToEnglish implements TransliteratorInterface
      *
      * @return string
      */
-    public static function transliterate($ukrainianText)
+    public static function transliterate(string $ukrainianText): string
     {
         $transliteratedText = '';
 
         if (mb_strlen($ukrainianText) > 0) {
-            // If found "Zgh|zgh" exception then replace it
             if (self::checkForZghException($ukrainianText)) {
                 $ukrainianText = str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
             }
-            // Transliteration is doing by rendering each letter
             $transliteratedText = str_replace(
                 array_keys(self::$ukrainianToEnglishRules),
                 array_values(self::$ukrainianToEnglishRules),
@@ -125,7 +121,7 @@ class UkrainianToEnglish implements TransliteratorInterface
      *
      * @return bool
      */
-    private static function checkForZghException($ukrainianText)
+    private static function checkForZghException(string $ukrainianText): bool
     {
         return (bool) mb_substr_count($ukrainianText, 'Зг') || (bool) mb_substr_count($ukrainianText, 'зг');
     }

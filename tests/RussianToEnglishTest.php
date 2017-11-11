@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -11,15 +11,16 @@
 namespace Tests\Fresh\Transliteration;
 
 use Fresh\Transliteration\Transliterator;
+use PHPUnit\Framework\TestCase;
 
 /**
  * RussianToEnglish Transliterator Test.
  *
- * @author Artem Genvald <mvilshansky@gmail.com>
+ * @author Artem Genvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
  */
-class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
+class RussianToEnglishTest extends TestCase
 {
     protected $transliterator;
 
@@ -29,17 +30,16 @@ class RussianToEnglishTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider dataProvider
+     * @dataProvider alphabetProvider
      */
-    public function testTransliterationFromRussianToEnglish($russianText, $transliteratedText)
+    public function testTransliterationFromRussianToEnglish(string $russianText, string $transliteratedText)
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
     }
 
-    public function dataProvider()
+    public function alphabetProvider(): array
     {
         return [
-            // Russian alphabet
             ['а', 'a'],
             ['б', 'b'],
             ['в', 'v'],

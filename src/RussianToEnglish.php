@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
- * (c) Mykhailo Vilshansky <mvilshansky@gmail.com>
+ * (c) Artem Genvald <genvaldartem@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -13,8 +13,6 @@ namespace Fresh\Transliteration;
 /**
  * Transliteration from Russian to English.
  *
- * According to the rules of transliteration.
- *
  * @author Artem Genvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
@@ -23,9 +21,7 @@ namespace Fresh\Transliteration;
  */
 class RussianToEnglish implements TransliteratorInterface
 {
-    /**
-     * @var array
-     */
+    /** @var array */
     private static $russianToEnglishRules = [
         'а' => 'a',
         'б' => 'b',
@@ -100,12 +96,11 @@ class RussianToEnglish implements TransliteratorInterface
      *
      * @return string
      */
-    public static function transliterate($russianText)
+    public static function transliterate(string $russianText): string
     {
         $transliteratedText = '';
 
         if (mb_strlen($russianText) > 0) {
-            // Transliteration is doing by rendering each letter
             $transliteratedText = str_replace(
                 array_keys(self::$russianToEnglishRules),
                 array_values(self::$russianToEnglishRules),

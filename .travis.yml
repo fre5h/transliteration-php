@@ -2,20 +2,16 @@ language: php
 sudo: false
 
 php:
-  - 5.4
-  - 5.5
-  - 5.6  
-  - 7.0
   - 7.1
 
 before_script:
   - composer self-update
-  
+
 install:
   - composer install --dev --no-interaction --prefer-dist
 
 script:
-  - ./vendor/bin/phpcs ./ -p --encoding=utf-8 --extensions=php --ignore=vendor --standard=PSR2
+  - ./vendor/bin/phpcs ./ -p --encoding=utf-8 --extensions=php --ignore=vendor --ignore=tests --standard=PSR2
   - ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=coverage.xml
 
 after_success:
