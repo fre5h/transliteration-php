@@ -104,13 +104,13 @@ class UkrainianToEnglish implements TransliteratorInterface
     {
         $transliteratedText = '';
 
-        if (mb_strlen($ukrainianText) > 0) {
+        if (\mb_strlen($ukrainianText) > 0) {
             if (self::checkForZghException($ukrainianText)) {
-                $ukrainianText = str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
+                $ukrainianText = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
             }
-            $transliteratedText = str_replace(
-                array_keys(self::$ukrainianToEnglishRules),
-                array_values(self::$ukrainianToEnglishRules),
+            $transliteratedText = \str_replace(
+                \array_keys(self::$ukrainianToEnglishRules),
+                \array_values(self::$ukrainianToEnglishRules),
                 $ukrainianText
             );
         }
@@ -125,6 +125,6 @@ class UkrainianToEnglish implements TransliteratorInterface
      */
     private static function checkForZghException(string $ukrainianText): bool
     {
-        return (bool) mb_substr_count($ukrainianText, 'Зг') || (bool) mb_substr_count($ukrainianText, 'зг');
+        return (bool) \mb_substr_count($ukrainianText, 'Зг') || (bool) \mb_substr_count($ukrainianText, 'зг');
     }
 }
