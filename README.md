@@ -43,7 +43,7 @@ PHP library for transliteration.
         <tr>
             <td>Russian</td>
             <td>English</td>
-            <td></td>
+            <td>custom</td>
         </tr>
     </tbody>
 </table>
