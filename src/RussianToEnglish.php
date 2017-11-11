@@ -102,10 +102,10 @@ class RussianToEnglish implements TransliteratorInterface
     {
         $transliteratedText = '';
 
-        if (mb_strlen($russianText) > 0) {
-            $transliteratedText = str_replace(
-                array_keys(self::$russianToEnglishRules),
-                array_values(self::$russianToEnglishRules),
+        if (\mb_strlen($russianText) > 0) {
+            $transliteratedText = \str_replace(
+                \array_keys(self::$russianToEnglishRules),
+                \array_values(self::$russianToEnglishRules),
                 $russianText
             );
         }
