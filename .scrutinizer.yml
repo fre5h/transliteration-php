@@ -1,11 +1,12 @@
 checks:
-  php:
-    code_rating: true
-    duplication: true
+  php: true
 
 filter:
+  paths:
+    - src/*
   excluded_paths:
     - vendor/*
+    - tests/*
 
 before_commands:
-  - "composer install --prefer-source"
+  - "composer install --prefer-dist"

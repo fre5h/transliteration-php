@@ -8,18 +8,17 @@ PHP library for transliteration.
 [![License](https://img.shields.io/packagist/l/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Latest Stable Version](https://img.shields.io/packagist/v/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Total Downloads](https://img.shields.io/packagist/dt/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
-[![Dependency Status](https://www.versioneye.com/user/projects/57b5b95e1dcdc900451877ef/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57b5b95e1dcdc900451877ef)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/ad4d26d5-cd6b-4fa6-8287-7d74234a2106.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
 [![StyleCI](https://styleci.io/repos/15205247/shield?style=flat-square)](https://styleci.io/repos/15205247)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration)
 
 ## Requirements
 
-* PHP 5.4 *and later*
+* PHP 7.1 *and later*
 
 ## Install via Composer
 
-```php composer.phar require fresh/transliteration='~1.1'```
+```composer req fresh/transliteration='~2.0'```
 
 ## Available transliteration methods
 
@@ -33,21 +32,18 @@ PHP library for transliteration.
     </thead>
     <tbody>
         <tr>
-            <td>
-                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" />
-                <br />
-                Ukrainian
-            </td>
-            <td>
-                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
-                <br />
-                English
-            </td>
+            <td>Ukrainian</td>
+            <td>English</td>
             <td>
                 Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
                 <br />
                 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
             </td>
+        </tr>
+        <tr>
+            <td>Russian</td>
+            <td>English</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
@@ -81,16 +77,8 @@ class Foo
 <table>
     <thead>
         <tr>
-            <th>
-                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" />
-                <br />
-                Ukrainian text
-            </th>
-            <th>
-                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
-                <br />
-                Transliterated text
-            </th>
+            <th>Ukrainian text</th>
+            <th>Transliterated text</th>
         </tr>
     </thead>
     <tbody>
@@ -127,4 +115,4 @@ class Foo
 
 ## Contributing
 
-See [CONTRIBUTING](https://github.com/fre5h/transliteration/blob/master/CONTRIBUTING.md) file.
+See [CONTRIBUTING](https://github.com/fre5h/transliteration/blob/master/.github/CONTRIBUTING.md) file.

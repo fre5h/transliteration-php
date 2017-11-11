@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -11,13 +13,14 @@
 namespace Tests\Fresh\Transliteration;
 
 use Fresh\Transliteration\Transliterator;
+use PHPUnit\Framework\TestCase;
 
 /**
  * UkrainianToEnglish Transliterator Test.
  *
  * @author Artem Genvald <genvaldartem@gmail.com>
  */
-class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
+class UkrainianToEnglishTest extends TestCase
 {
     protected $transliterator;
 
@@ -27,14 +30,16 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @dataProvider dataProvider
+     * @dataProvider alphabetProvider
+     * @dataProvider officialExamplesProvider
+     * @dataProvider sentencesProvider
      */
-    public function testTransliterationFromUkrainianToEnglish($ukrainianText, $transliteratedText)
+    public function testTransliterationFromUkrainianToEnglish(string $ukrainianText, string $transliteratedText)
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }
 
-    public function dataProvider()
+    public function alphabetProvider(): array
     {
         return [
             // Ukrainian alphabet
@@ -104,13 +109,12 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['ю', 'iu'],
             ['я', 'ia'],
             ['\'', ''],
-            ['', ''],
-            ['-', '-'],
-            ['!', '!'],
-            [',', ','],
-            ['.', '.'],
-            [' ', ' '],
+        ];
+    }
 
+    public function officialExamplesProvider(): array
+    {
+        return [
             // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
             // Аа
             ['Алушта', 'Alushta'],
@@ -219,6 +223,14 @@ class UkrainianToEnglishTest extends \PHPUnit_Framework_TestCase
             ['Знам\'янка', 'Znamianka'],
             ['Феодосія',   'Feodosiia'],
             // Some text
+            ['Добрий день', 'Dobryi den'],
+            ['Привіт світ!', 'Pryvit svit!'],
+        ];
+    }
+
+    public function sentencesProvider(): array
+    {
+        return [
             ['Добрий день', 'Dobryi den'],
             ['Привіт світ!', 'Pryvit svit!'],
         ];

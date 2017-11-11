@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -22,7 +24,7 @@ class Transliterator
      *
      * @return string
      */
-    public function ukToEn($ukrainianText)
+    public function ukToEn(string $ukrainianText): string
     {
         return UkrainianToEnglish::transliterate($ukrainianText);
     }
@@ -32,7 +34,7 @@ class Transliterator
      *
      * @return string
      */
-    public function ruToEn($russianText)
+    public function ruToEn(string $russianText): string
     {
         return RussianToEnglish::transliterate($russianText);
     }

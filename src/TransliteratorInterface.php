@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -19,6 +21,8 @@ interface TransliteratorInterface
 {
     /**
      * @param string $textToTransliterate
+     *
+     * @return string
      */
-    public static function transliterate($textToTransliterate);
+    public static function transliterate(string $textToTransliterate): string;
 }
