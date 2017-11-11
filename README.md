@@ -32,21 +32,18 @@ PHP library for transliteration.
     </thead>
     <tbody>
         <tr>
-            <td>
-                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" />
-                <br />
-                Ukrainian
-            </td>
-            <td>
-                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
-                <br />
-                English
-            </td>
+            <td>Ukrainian</td>
+            <td>English</td>
             <td>
                 Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
                 <br />
                 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
             </td>
+        </tr>
+        <tr>
+            <td>Russian</td>
+            <td>English</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
@@ -80,16 +77,8 @@ class Foo
 <table>
     <thead>
         <tr>
-            <th>
-                <img src="/resources/images/ukraine-flag.png" alt="Ukrainian" title="Ukrainian" />
-                <br />
-                Ukrainian text
-            </th>
-            <th>
-                <img src="/resources/images/united-kingdom-flag.png" alt="English" title="English" />
-                <br />
-                Transliterated text
-            </th>
+            <th>Ukrainian text</th>
+            <th>Transliterated text</th>
         </tr>
     </thead>
     <tbody>
