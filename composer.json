@@ -26,6 +26,19 @@
     "autoload": {
         "psr-4": {
             "Fresh\\Transliteration\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Fresh\\Transliteration\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
         }
     }
 }
