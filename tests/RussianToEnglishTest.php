@@ -4,7 +4,7 @@ declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
- * (c) Artem Genvald <genvaldartem@gmail.com>
+ * (c) Artem Henvald <genvaldartem@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,12 +18,13 @@ use PHPUnit\Framework\TestCase;
 /**
  * RussianToEnglish Transliterator Test.
  *
- * @author Artem Genvald <genvaldartem@gmail.com>
+ * @author Artem Henvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
  */
 class RussianToEnglishTest extends TestCase
 {
+    /** @var Transliterator */
     protected $transliterator;
 
     public function setUp()

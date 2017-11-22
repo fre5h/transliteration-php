@@ -4,7 +4,7 @@ declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
- * (c) Artem Genvald <genvaldartem@gmail.com>
+ * (c) Artem Henvald <genvaldartem@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -15,7 +15,7 @@ namespace Fresh\Transliteration;
 /**
  * Transliteration from Russian to English.
  *
- * @author Artem Genvald <genvaldartem@gmail.com>
+ * @author Artem Henvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
  *
@@ -23,8 +23,8 @@ namespace Fresh\Transliteration;
  */
 class RussianToEnglish implements TransliteratorInterface
 {
-    /** @var array */
-    private static $russianToEnglishRules = [
+    /** @const array */
+    private const RUSSIAN_TO_ENGLISH_RULES = [
         'а' => 'a',
         'б' => 'b',
         'в' => 'v',
@@ -104,8 +104,8 @@ class RussianToEnglish implements TransliteratorInterface
 
         if (\mb_strlen($russianText) > 0) {
             $transliteratedText = \str_replace(
-                \array_keys(self::$russianToEnglishRules),
-                \array_values(self::$russianToEnglishRules),
+                \array_keys(self::RUSSIAN_TO_ENGLISH_RULES),
+                \array_values(self::RUSSIAN_TO_ENGLISH_RULES),
                 $russianText
             );
         }

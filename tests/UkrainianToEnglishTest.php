@@ -4,7 +4,7 @@ declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
- * (c) Artem Genvald <genvaldartem@gmail.com>
+ * (c) Artem Henvald <genvaldartem@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,10 +18,11 @@ use PHPUnit\Framework\TestCase;
 /**
  * UkrainianToEnglish Transliterator Test.
  *
- * @author Artem Genvald <genvaldartem@gmail.com>
+ * @author Artem Henvald <genvaldartem@gmail.com>
  */
 class UkrainianToEnglishTest extends TestCase
 {
+    /** @var Transliterator */
     protected $transliterator;
 
     public function setUp()
@@ -42,7 +43,6 @@ class UkrainianToEnglishTest extends TestCase
     public function alphabetProvider(): array
     {
         return [
-            // Ukrainian alphabet
             ['А', 'A'],
             ['Б', 'B'],
             ['В', 'V'],
@@ -114,8 +114,8 @@ class UkrainianToEnglishTest extends TestCase
 
     public function officialExamplesProvider(): array
     {
+        // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
         return [
-            // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
             // Аа
             ['Алушта', 'Alushta'],
             ['Андрій', 'Andrii'],

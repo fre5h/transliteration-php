@@ -4,7 +4,7 @@ declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
- * (c) Artem Genvald <genvaldartem@gmail.com>
+ * (c) Artem Henvald <genvaldartem@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -18,14 +18,14 @@ namespace Fresh\Transliteration;
  * According to the rules of transliteration, that are described in the resolution
  * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010.
  *
- * @author Artem Genvald <genvaldartem@gmail.com>
+ * @author Artem Henvald <genvaldartem@gmail.com>
  *
  * @see http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
  */
 class UkrainianToEnglish implements TransliteratorInterface
 {
-    /** @var array */
-    private static $ukrainianToEnglishRules = [
+    /** @const array */
+    private const UKRAINIAN_TO_ENGLISH_RULES = [
         'А' => 'A',
         'Б' => 'B',
         'В' => 'V',
@@ -109,8 +109,8 @@ class UkrainianToEnglish implements TransliteratorInterface
                 $ukrainianText = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
             }
             $transliteratedText = \str_replace(
-                \array_keys(self::$ukrainianToEnglishRules),
-                \array_values(self::$ukrainianToEnglishRules),
+                \array_keys(self::UKRAINIAN_TO_ENGLISH_RULES),
+                \array_values(self::UKRAINIAN_TO_ENGLISH_RULES),
                 $ukrainianText
             );
         }
