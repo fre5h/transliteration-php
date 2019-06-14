@@ -1,6 +1,4 @@
 <?php
-
-declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -9,6 +7,8 @@ declare(strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+declare(strict_types=1);
 
 namespace Tests\Fresh\Transliteration;
 
@@ -35,7 +35,7 @@ class UkrainianToEnglishTest extends TestCase
      * @dataProvider officialExamplesProvider
      * @dataProvider sentencesProvider
      */
-    public function testTransliterationFromUkrainianToEnglish(string $ukrainianText, string $transliteratedText)
+    public function testTransliterationFromUkrainianToEnglish(string $ukrainianText, string $transliteratedText): void
     {
         $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }

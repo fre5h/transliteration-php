@@ -1,6 +1,4 @@
 <?php
-
-declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -9,6 +7,8 @@ declare(strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+declare(strict_types=1);
 
 namespace Fresh\Transliteration;
 
@@ -23,7 +23,7 @@ namespace Fresh\Transliteration;
  */
 class RussianToEnglish implements TransliteratorInterface
 {
-    /** @const array */
+    /** @const string[] */
     private const RUSSIAN_TO_ENGLISH_RULES = [
         'а' => 'a',
         'б' => 'b',
@@ -102,7 +102,7 @@ class RussianToEnglish implements TransliteratorInterface
     {
         $transliteratedText = '';
 
-        if (\mb_strlen($russianText) > 0) {
+        if ('' !== $russianText) {
             $transliteratedText = \str_replace(
                 \array_keys(self::RUSSIAN_TO_ENGLISH_RULES),
                 \array_values(self::RUSSIAN_TO_ENGLISH_RULES),

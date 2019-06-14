@@ -1,0 +1,11 @@
+includes:
+    - 'vendor/phpstan/phpstan-phpunit/extension.neon'
+    - 'vendor/phpstan/phpstan-phpunit/rules.neon'
+    - 'vendor/slam/phpstan-extensions/conf/slam-rules.neon'
+parameters:
+    level: 7
+    excludes_analyse:
+        - '%rootDir%/../../../tests/*'
+        - '%rootDir%/../../../vendor/*'
+    fileExtensions:
+        - 'php'

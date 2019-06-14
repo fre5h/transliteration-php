@@ -1,13 +1,13 @@
 preset: recommended
 
 enabled:
-  - combine_consecutive_unsets
-  - linebreak_after_opening_tag
-  - ordered_class_elements
-  - unalign_double_arrow
+    - combine_consecutive_unsets
+    - linebreak_after_opening_tag
+    - ordered_class_elements
+    - unalign_double_arrow
 
 disabled:
-  - align_double_arrow
+    - align_double_arrow
 
 finder:
     exclude:

@@ -1,6 +1,4 @@
 <?php
-
-declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -9,6 +7,8 @@ declare(strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+declare(strict_types=1);
 
 namespace Tests\Fresh\Transliteration;
 
@@ -35,9 +35,9 @@ class RussianToEnglishTest extends TestCase
     /**
      * @dataProvider alphabetProvider
      */
-    public function testTransliterationFromRussianToEnglish(string $russianText, string $transliteratedText)
+    public function testTransliterationFromRussianToEnglish(string $russianText, string $transliteratedText): void
     {
-        $this->assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
+        self::assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
     }
 
     public function alphabetProvider(): array
