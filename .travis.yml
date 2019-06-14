@@ -3,27 +3,28 @@ language: php
 sudo: false
 
 php:
-  - 7.1
-  - 7.2
-  - 7.3
+    - 7.1
+    - 7.2
+    - 7.3
 
 before_script:
-  - composer self-update
+    - composer self-update
 
 install:
-  - composer install --dev --no-interaction --prefer-dist
+    - composer install --dev --no-interaction --prefer-dist
 
 script:
-  - ./vendor/bin/phpcs ./ -p --encoding=utf-8 --extensions=php --ignore=vendor --ignore=tests --standard=PSR2
-  - ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=coverage.xml
+    - ./vendor/bin/phpcs ./ -p --encoding=utf-8 --extensions=php --ignore=vendor --ignore=tests --standard=phpcs.xml
+    - ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover=coverage.xml
+    - ./vendor/bin/phpstan analyse -l 7 --no-progress -c phpstan.neon ./
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+    - bash <(curl -s https://codecov.io/bash)
 
 cache:
-  directories:
-    - $COMPOSER_CACHE_DIR
+    directories:
+        - $COMPOSER_CACHE_DIR
 
 notifications:
-  email:
-    - genvaldartem@gmail.com
+    email:
+        - genvaldartem@gmail.com

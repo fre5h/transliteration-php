@@ -1,6 +1,4 @@
 <?php
-
-declare(strict_types=1);
 /*
  * This file is part of the Transliteration library
  *
@@ -9,6 +7,8 @@ declare(strict_types=1);
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
+declare(strict_types=1);
 
 namespace Fresh\Transliteration;
 
@@ -24,7 +24,7 @@ namespace Fresh\Transliteration;
  */
 class UkrainianToEnglish implements TransliteratorInterface
 {
-    /** @const array */
+    /** @const string[] */
     private const UKRAINIAN_TO_ENGLISH_RULES = [
         'А' => 'A',
         'Б' => 'B',
@@ -104,7 +104,7 @@ class UkrainianToEnglish implements TransliteratorInterface
     {
         $transliteratedText = '';
 
-        if (\mb_strlen($ukrainianText) > 0) {
+        if ('' !== $ukrainianText) {
             if (self::checkForZghException($ukrainianText)) {
                 $ukrainianText = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
             }
