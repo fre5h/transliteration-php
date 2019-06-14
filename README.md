@@ -1,6 +1,6 @@
 # Transliteration
 
-PHP library for transliteration.
+PHP library for transliteration. 🇺🇦 :uk: :ru: :abcd:
 
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
 [![Build Status](https://img.shields.io/travis/fre5h/transliteration.svg?style=flat-square)](https://travis-ci.org/fre5h/transliteration)
