@@ -15,7 +15,7 @@ PHP library for transliteration. 🇺🇦 :uk: :ru: :abcd:
 
 ## Requirements
 
-* PHP 7.1.3 *and later*
+* PHP 7.1 *and later*
 
 ## Install via Composer
 
