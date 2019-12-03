@@ -19,7 +19,7 @@ PHP library for transliteration. 🇺🇦 :uk: :ru: :abcd:
 
 ## Install via Composer
 
-```composer req fresh/transliteration='~2.0'```
+```composer req fresh/transliteration='~2.1'```
 
 ## Available transliteration methods
 
