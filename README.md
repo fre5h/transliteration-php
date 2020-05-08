@@ -1,6 +1,6 @@
 # Transliteration
 
-PHP library for transliteration. 🇺🇦 :uk: :ru: :abcd:
+PHP library for transliteration. 🇺🇦 🇬🇧 🇷🇺 🔡
 
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
 [![Build Status](https://img.shields.io/travis/fre5h/transliteration/master.svg?style=flat-square)](https://travis-ci.org/fre5h/transliteration)
@@ -13,15 +13,15 @@ PHP library for transliteration. 🇺🇦 :uk: :ru: :abcd:
 
 [![SymfonyInsight](https://insight.symfony.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/big.svg)](https://insight.symfony.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
 
-## Requirements
+## Requirements 🧐
 
 * PHP 7.1 *and later*
 
-## Install via Composer
+## Installation 🌱
 
 ```composer req fresh/transliteration='~2.1'```
 
-## Available transliteration methods
+## Available transliteration methods 🎁
 
 <table>
     <thead>
@@ -49,7 +49,7 @@ PHP library for transliteration. 🇺🇦 :uk: :ru: :abcd:
     </tbody>
 </table>
 
-## Using
+## Using 👨‍🎓
 
 ```php
 <?php
@@ -73,7 +73,7 @@ class Foo
 }
 ```
 
-## Some examples of *Ukrainian-to-English* transliteration
+### Some examples of *Ukrainian-to-English* transliteration ℹ️
 
 <table>
     <thead>
@@ -114,6 +114,6 @@ class Foo
     </tbody>
 </table>
 
-## Contributing
+## Contributing 🤝
 
 See [CONTRIBUTING](https://github.com/fre5h/transliteration/blob/master/.github/CONTRIBUTING.md) file.
