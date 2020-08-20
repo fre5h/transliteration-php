@@ -2,16 +2,14 @@
 
 PHP library for transliteration. 🇺🇦 🇬🇧 🇷🇺 🔡 🐘
 
-[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration/)
-[![Build Status](https://img.shields.io/travis/fre5h/transliteration/master.svg?style=flat-square)](https://travis-ci.org/fre5h/transliteration)
-[![CodeCov](https://img.shields.io/codecov/c/github/fre5h/transliteration.svg?style=flat-square)](https://codecov.io/github/fre5h/transliteration)
+[![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration-php/)
+[![Build Status](https://img.shields.io/travis/fre5h/transliteration-php/master.svg?style=flat-square)](https://travis-ci.org/fre5h/transliteration-php)
+[![CodeCov](https://img.shields.io/codecov/c/github/fre5h/transliteration-php.svg?style=flat-square)](https://codecov.io/github/fre5h/transliteration-php)
 [![License](https://img.shields.io/packagist/l/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Latest Stable Version](https://img.shields.io/packagist/v/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Total Downloads](https://img.shields.io/packagist/dt/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![StyleCI](https://styleci.io/repos/15205247/shield?style=flat-square)](https://styleci.io/repos/15205247)
-[![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration)
-
-[![SymfonyInsight](https://insight.symfony.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106/big.svg)](https://insight.symfony.com/projects/ad4d26d5-cd6b-4fa6-8287-7d74234a2106)
+[![Gitter](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg?style=flat-square)](https://gitter.im/fre5h/transliteration-php)
 
 ## Requirements 🧐
 
