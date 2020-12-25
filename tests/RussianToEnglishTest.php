@@ -27,7 +27,7 @@ class RussianToEnglishTest extends TestCase
     /** @var Transliterator */
     protected $transliterator;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->transliterator = new Transliterator();
     }
