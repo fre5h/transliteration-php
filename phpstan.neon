@@ -3,7 +3,7 @@ includes:
     - 'vendor/phpstan/phpstan-phpunit/rules.neon'
     - 'vendor/slam/phpstan-extensions/conf/slam-rules.neon'
 parameters:
-    level: 7
+    level: 8
     excludes_analyse:
         - '%rootDir%/../../../tests/*'
         - '%rootDir%/../../../vendor/*'
