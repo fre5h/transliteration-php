@@ -3,7 +3,7 @@
 PHP library for transliteration. 🇺🇦 🇬🇧 🇷🇺 🔡 🐘
 
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration-php/)
-[![Build Status](https://img.shields.io/travis/fre5h/transliteration-php/master.svg?style=flat-square)](https://travis-ci.org/fre5h/transliteration-php)
+[![Build Status](https://img.shields.io/travis/fre5h/transliteration-php/master.svg?style=flat-square)](https://travis-ci.com/fre5h/transliteration-php)
 [![CodeCov](https://img.shields.io/codecov/c/github/fre5h/transliteration-php.svg?style=flat-square)](https://codecov.io/github/fre5h/transliteration-php)
 [![License](https://img.shields.io/packagist/l/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
 [![Latest Stable Version](https://img.shields.io/packagist/v/fresh/transliteration.svg?style=flat-square)](https://packagist.org/packages/fresh/transliteration)
