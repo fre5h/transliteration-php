@@ -210,7 +210,7 @@ class UkrainianToEnglishTest extends TestCase
         yield ['Гоща',      'Hoshcha'];
         yield ['Гаращенко', 'Harashchenko'];
         // Юю
-        yield ['Юрій',      'Yurii'],
+        yield ['Юрій',      'Yurii'];
         yield ['Корюківка', 'Koriukivka'];
         // Яя
         yield ['Яготин',     'Yahotyn'];
