@@ -24,8 +24,7 @@ use PHPUnit\Framework\TestCase;
  */
 class RussianToEnglishTest extends TestCase
 {
-    /** @var Transliterator */
-    protected $transliterator;
+    protected Transliterator $transliterator;
 
     protected function setUp(): void
     {
