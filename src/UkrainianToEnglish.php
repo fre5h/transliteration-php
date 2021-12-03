@@ -24,7 +24,7 @@ namespace Fresh\Transliteration;
  */
 class UkrainianToEnglish implements TransliteratorInterface
 {
-    /** @const string[] */
+    /** @const array<string, string> */
     private const UKRAINIAN_TO_ENGLISH_RULES = [
         'А' => 'A',
         'Б' => 'B',

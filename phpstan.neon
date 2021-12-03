@@ -3,9 +3,10 @@ includes:
     - 'vendor/phpstan/phpstan-phpunit/rules.neon'
     - 'vendor/slam/phpstan-extensions/conf/slam-rules.neon'
 parameters:
-    level: 8
-    excludes_analyse:
+    level: 9
+    excludePaths:
         - '%rootDir%/../../../tests/*'
         - '%rootDir%/../../../vendor/*'
     fileExtensions:
         - 'php'
+    checkMissingIterableValueType: false

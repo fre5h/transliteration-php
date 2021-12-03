@@ -23,7 +23,7 @@ namespace Fresh\Transliteration;
  */
 class RussianToEnglish implements TransliteratorInterface
 {
-    /** @const string[] */
+    /** @const array<string, string> */
     private const RUSSIAN_TO_ENGLISH_RULES = [
         'а' => 'a',
         'б' => 'b',

@@ -13,11 +13,11 @@ PHP library for transliteration. 🇺🇦 🇬🇧 🇷🇺 🔡 🐘
 
 ## Requirements 🧐
 
-* PHP 7.2 *and later*
+* PHP >= 8.1
 
 ## Installation 🌱
 
-```composer req fresh/transliteration='~2.1'```
+```composer req fresh/transliteration='~3.0'```
 
 ## Available transliteration methods 🎁
 

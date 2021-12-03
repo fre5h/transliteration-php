@@ -1,17 +1,19 @@
 preset: recommended
 
+version: 8.1
+
 enabled:
-    - combine_consecutive_unsets
-    - linebreak_after_opening_tag
-    - ordered_class_elements
-    - unalign_double_arrow
+  - combine_consecutive_unsets
+  - linebreak_after_opening_tag
+  - ordered_class_elements
+  - unalign_double_arrow
 
 disabled:
-    - align_double_arrow
+  - align_double_arrow
 
 finder:
-    exclude:
-        - "tests"
-        - "*Test.php"
-    name:
-        - "*.php"
+  exclude:
+    - "tests"
+    - "*Test.php"
+  name:
+    - "*.php"

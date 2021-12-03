@@ -22,8 +22,7 @@ use PHPUnit\Framework\TestCase;
  */
 class UkrainianToEnglishTest extends TestCase
 {
-    /** @var Transliterator */
-    protected $transliterator;
+    protected Transliterator $transliterator;
 
     protected function setUp(): void
     {
@@ -40,199 +39,193 @@ class UkrainianToEnglishTest extends TestCase
         $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }
 
-    public function alphabetProvider(): array
+    public function alphabetProvider(): iterable
     {
-        return [
-            ['А', 'A'],
-            ['Б', 'B'],
-            ['В', 'V'],
-            ['Г', 'H'],
-            ['Ґ', 'G'],
-            ['Д', 'D'],
-            ['Е', 'E'],
-            ['Є', 'Ye'],
-            ['Ж', 'Zh'],
-            ['З', 'Z'],
-            ['И', 'Y'],
-            ['І', 'I'],
-            ['Ї', 'Yi'],
-            ['Й', 'Y'],
-            ['К', 'K'],
-            ['Л', 'L'],
-            ['М', 'M'],
-            ['Н', 'N'],
-            ['О', 'O'],
-            ['П', 'P'],
-            ['Р', 'R'],
-            ['С', 'S'],
-            ['Т', 'T'],
-            ['У', 'U'],
-            ['Ф', 'F'],
-            ['Х', 'Kh'],
-            ['Ц', 'Ts'],
-            ['Ч', 'Ch'],
-            ['Ш', 'Sh'],
-            ['Щ', 'Shch'],
-            ['Ю', 'Yu'],
-            ['Я', 'Ya'],
-            ['а', 'a'],
-            ['б', 'b'],
-            ['в', 'v'],
-            ['г', 'h'],
-            ['ґ', 'g'],
-            ['д', 'd'],
-            ['е', 'e'],
-            ['є', 'ie'],
-            ['ж', 'zh'],
-            ['з', 'z'],
-            ['и', 'y'],
-            ['і', 'i'],
-            ['ї', 'i'],
-            ['й', 'i'],
-            ['к', 'k'],
-            ['л', 'l'],
-            ['м', 'm'],
-            ['н', 'n'],
-            ['о', 'o'],
-            ['п', 'p'],
-            ['р', 'r'],
-            ['с', 's'],
-            ['т', 't'],
-            ['у', 'u'],
-            ['ф', 'f'],
-            ['х', 'kh'],
-            ['ц', 'ts'],
-            ['ч', 'ch'],
-            ['ш', 'sh'],
-            ['щ', 'shch'],
-            ['ь', ''],
-            ['ю', 'iu'],
-            ['я', 'ia'],
-            ['\'', ''],
-        ];
+        yield ['А', 'A'];
+        yield ['Б', 'B'];
+        yield ['В', 'V'];
+        yield ['Г', 'H'];
+        yield ['Ґ', 'G'];
+        yield ['Д', 'D'];
+        yield ['Е', 'E'];
+        yield ['Є', 'Ye'];
+        yield ['Ж', 'Zh'];
+        yield ['З', 'Z'];
+        yield ['И', 'Y'];
+        yield ['І', 'I'];
+        yield ['Ї', 'Yi'];
+        yield ['Й', 'Y'];
+        yield ['К', 'K'];
+        yield ['Л', 'L'];
+        yield ['М', 'M'];
+        yield ['Н', 'N'];
+        yield ['О', 'O'];
+        yield ['П', 'P'];
+        yield ['Р', 'R'];
+        yield ['С', 'S'];
+        yield ['Т', 'T'];
+        yield ['У', 'U'];
+        yield ['Ф', 'F'];
+        yield ['Х', 'Kh'];
+        yield ['Ц', 'Ts'];
+        yield ['Ч', 'Ch'];
+        yield ['Ш', 'Sh'];
+        yield ['Щ', 'Shch'];
+        yield ['Ю', 'Yu'];
+        yield ['Я', 'Ya'];
+        yield ['а', 'a'];
+        yield ['б', 'b'];
+        yield ['в', 'v'];
+        yield ['г', 'h'];
+        yield ['ґ', 'g'];
+        yield ['д', 'd'];
+        yield ['е', 'e'];
+        yield ['є', 'ie'];
+        yield ['ж', 'zh'];
+        yield ['з', 'z'];
+        yield ['и', 'y'];
+        yield ['і', 'i'];
+        yield ['ї', 'i'];
+        yield ['й', 'i'];
+        yield ['к', 'k'];
+        yield ['л', 'l'];
+        yield ['м', 'm'];
+        yield ['н', 'n'];
+        yield ['о', 'o'];
+        yield ['п', 'p'];
+        yield ['р', 'r'];
+        yield ['с', 's'];
+        yield ['т', 't'];
+        yield ['у', 'u'];
+        yield ['ф', 'f'];
+        yield ['х', 'kh'];
+        yield ['ц', 'ts'];
+        yield ['ч', 'ch'];
+        yield ['ш', 'sh'];
+        yield ['щ', 'shch'];
+        yield ['ь', ''];
+        yield ['ю', 'iu'];
+        yield ['я', 'ia'];
+        yield ['\'', ''];
     }
 
-    public function officialExamplesProvider(): array
+    public function officialExamplesProvider(): iterable
     {
         // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
-        return [
-            // Аа
-            ['Алушта', 'Alushta'],
-            ['Андрій', 'Andrii'],
-            // Бб
-            ['Борщагівка', 'Borshchahivka'],
-            ['Борисенко',  'Borysenko'],
-            // Вв
-            ['Вінниця',   'Vinnytsia'],
-            ['Володимир', 'Volodymyr'],
-            // Гг
-            ['Гадяч',     'Hadiach'],
-            ['Богдан',    'Bohdan'],
-            ['Згурський', 'Zghurskyi'],
-            // Ґґ
-            ['Ґалаґан', 'Galagan'],
-            ['Ґорґани', 'Gorgany'],
-            // Дд
-            ['Донецьк', 'Donetsk'],
-            ['Дмитро',  'Dmytro'],
-            // Ее
-            ['Рівне',  'Rivne'],
-            ['Олег',   'Oleh'],
-            ['Есмань', 'Esman'],
-            // Єє
-            ['Єнакієве', 'Yenakiieve'],
-            ['Гаєвич',   'Haievych'],
-            ['Короп\'є', 'Koropie'],
-            // Жж
-            ['Житомир', 'Zhytomyr'],
-            ['Жанна',   'Zhanna'],
-            ['Жежелів', 'Zhezheliv'],
-            // Зз
-            ['Закарпаття', 'Zakarpattia'],
-            ['Казимирчук', 'Kazymyrchuk'],
-            // Ии
-            ['Медвин',     'Medvyn'],
-            ['Михайленко', 'Mykhailenko'],
-            // Іі
-            ['Іванків',  'Ivankiv'],
-            ['Іващенко', 'Ivashchenko'],
-            // Її
-            ['Їжакевич', 'Yizhakevych'],
-            ['Кадиївка', 'Kadyivka'],
-            ['Мар\'їне', 'Marine'],
-            // Йй
-            ['Йосипівка', 'Yosypivka'],
-            ['Стрий',     'Stryi'],
-            ['Олексій',   'Oleksii'],
-            // Кк
-            ['Київ',      'Kyiv'],
-            ['Коваленко', 'Kovalenko'],
-            // Лл
-            ['Лебедин', 'Lebedyn'],
-            ['Леонід',  'Leonid'],
-            // Мм
-            ['Миколаїв', 'Mykolaiv'],
-            ['Маринич',  'Marynych'],
-            // Нн
-            ['Ніжин',   'Nizhyn'],
-            ['Наталія', 'Nataliia'],
-            // Оо
-            ['Одеса',    'Odesa'],
-            ['Онищенко', 'Onyshchenko'],
-            // Пп
-            ['Полтава', 'Poltava'],
-            ['Петро',   'Petro'],
-            // Рр
-            ['Решетилівка', 'Reshetylivka'],
-            ['Рибчинський', 'Rybchynskyi'],
-            // Сс
-            ['Суми',    'Sumy'],
-            ['Соломія', 'Solomiia'],
-            // Тт
-            ['Тернопіль', 'Ternopil'],
-            ['Троць',     'Trots'],
-            // Уу
-            ['Ужгород', 'Uzhhorod'],
-            ['Уляна',   'Uliana'],
-            // Фф
-            ['Фастів',   'Fastiv'],
-            ['Філіпчук', 'Filipchuk'],
-            // Хх
-            ['Харків',   'Kharkiv'],
-            ['Христина', 'Khrystyna'],
-            // Цц
-            ['Біла Церква', 'Bila Tserkva'],
-            ['Стеценко',    'Stetsenko'],
-            // Чч
-            ['Чернівці', 'Chernivtsi'],
-            ['Шевченко', 'Shevchenko'],
-            // Шш
-            ['Шостка',   'Shostka'],
-            ['Кишеньки', 'Kyshenky'],
-            // Щщ
-            ['Щербухи',   'Shcherbukhy'],
-            ['Гоща',      'Hoshcha'],
-            ['Гаращенко', 'Harashchenko'],
-            // Юю
-            ['Юрій',      'Yurii'],
-            ['Корюківка', 'Koriukivka'],
-            // Яя
-            ['Яготин',     'Yahotyn'],
-            ['Ярошенко',   'Yaroshenko'],
-            ['Костянтин',  'Kostiantyn'],
-            ['Знам\'янка', 'Znamianka'],
-            ['Феодосія',   'Feodosiia'],
-            // Some text
-            ['Добрий день', 'Dobryi den'],
-            ['Привіт світ!', 'Pryvit svit!'],
-        ];
+        // Аа
+        yield ['Алушта', 'Alushta'];
+        yield ['Андрій', 'Andrii'];
+        // Бб
+        yield ['Борщагівка', 'Borshchahivka'];
+        yield ['Борисенко',  'Borysenko'];
+        // Вв
+        yield ['Вінниця',   'Vinnytsia'];
+        yield ['Володимир', 'Volodymyr'];
+        // Гг
+        yield ['Гадяч',     'Hadiach'];
+        yield ['Богдан',    'Bohdan'];
+        yield ['Згурський', 'Zghurskyi'];
+        // Ґґ
+        yield ['Ґалаґан', 'Galagan'];
+        yield ['Ґорґани', 'Gorgany'];
+        // Дд
+        yield ['Донецьк', 'Donetsk'];
+        yield ['Дмитро',  'Dmytro'];
+        // Ее
+        yield ['Рівне',  'Rivne'];
+        yield ['Олег',   'Oleh'];
+        yield ['Есмань', 'Esman'];
+        // Єє
+        yield ['Єнакієве', 'Yenakiieve'];
+        yield ['Гаєвич',   'Haievych'];
+        yield ['Короп\'є', 'Koropie'];
+        // Жж
+        yield ['Житомир', 'Zhytomyr'];
+        yield ['Жанна',   'Zhanna'];
+        yield ['Жежелів', 'Zhezheliv'];
+        // Зз
+        yield ['Закарпаття', 'Zakarpattia'];
+        yield ['Казимирчук', 'Kazymyrchuk'];
+        // Ии
+        yield ['Медвин',     'Medvyn'];
+        yield ['Михайленко', 'Mykhailenko'];
+        // Іі
+        yield ['Іванків',  'Ivankiv'];
+        yield ['Іващенко', 'Ivashchenko'];
+        // Її
+        yield ['Їжакевич', 'Yizhakevych'];
+        yield ['Кадиївка', 'Kadyivka'];
+        yield ['Мар\'їне', 'Marine'];
+        // Йй
+        yield ['Йосипівка', 'Yosypivka'];
+        yield ['Стрий',     'Stryi'];
+        yield ['Олексій',   'Oleksii'];
+        // Кк
+        yield ['Київ',      'Kyiv'];
+        yield ['Коваленко', 'Kovalenko'];
+        // Лл
+        yield ['Лебедин', 'Lebedyn'];
+        yield ['Леонід',  'Leonid'];
+        // Мм
+        yield ['Миколаїв', 'Mykolaiv'];
+        yield ['Маринич',  'Marynych'];
+        // Нн
+        yield ['Ніжин',   'Nizhyn'];
+        yield ['Наталія', 'Nataliia'];
+        // Оо
+        yield ['Одеса',    'Odesa'];
+        yield ['Онищенко', 'Onyshchenko'];
+        // Пп
+        yield ['Полтава', 'Poltava'];
+        yield ['Петро',   'Petro'];
+        // Рр
+        yield ['Решетилівка', 'Reshetylivka'];
+        yield ['Рибчинський', 'Rybchynskyi'];
+        // Сс
+        yield ['Суми',    'Sumy'];
+        yield ['Соломія', 'Solomiia'];
+        // Тт
+        yield ['Тернопіль', 'Ternopil'];
+        yield ['Троць',     'Trots'];
+        // Уу
+        yield ['Ужгород', 'Uzhhorod'];
+        yield ['Уляна',   'Uliana'];
+        // Фф
+        yield ['Фастів',   'Fastiv'];
+        yield ['Філіпчук', 'Filipchuk'];
+        // Хх
+        yield ['Харків',   'Kharkiv'];
+        yield ['Христина', 'Khrystyna'];
+        // Цц
+        yield ['Біла Церква', 'Bila Tserkva'];
+        yield ['Стеценко',    'Stetsenko'];
+        // Чч
+        yield ['Чернівці', 'Chernivtsi'];
+        yield ['Шевченко', 'Shevchenko'];
+        // Шш
+        yield ['Шостка',   'Shostka'];
+        yield ['Кишеньки', 'Kyshenky'];
+        // Щщ
+        yield ['Щербухи',   'Shcherbukhy'];
+        yield ['Гоща',      'Hoshcha'];
+        yield ['Гаращенко', 'Harashchenko'];
+        // Юю
+        yield ['Юрій',      'Yurii'];
+        yield ['Корюківка', 'Koriukivka'];
+        // Яя
+        yield ['Яготин',     'Yahotyn'];
+        yield ['Ярошенко',   'Yaroshenko'];
+        yield ['Костянтин',  'Kostiantyn'];
+        yield ['Знам\'янка', 'Znamianka'];
+        yield ['Феодосія',   'Feodosiia'];
+        // Some text
+        yield ['Добрий день', 'Dobryi den'];
+        yield ['Привіт світ!', 'Pryvit svit!'];
     }
 
-    public function sentencesProvider(): array
+    public function sentencesProvider(): iterable
     {
-        return [
-            ['Добрий день', 'Dobryi den'],
-            ['Привіт світ!', 'Pryvit svit!'],
-        ];
+        yield ['Добрий день', 'Dobryi den'];
+        yield ['Привіт світ!', 'Pryvit svit!'];
     }
 }
