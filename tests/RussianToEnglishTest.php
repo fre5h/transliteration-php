@@ -105,6 +105,6 @@ class RussianToEnglishTest extends TestCase
         yield ['ъ', ''];
         yield ['э', 'e'];
         yield ['ю', 'yu'];
-        yield ['я', 'ya'];        
+        yield ['я', 'ya'];
     }
 }
