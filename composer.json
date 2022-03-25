@@ -1,7 +1,7 @@
 {
     "name": "fresh/transliteration",
     "description": "PHP library for transliteration.",
-    "keywords": ["transliteration", "transliterate", "Ukrainian", "English", "Russian"],
+    "keywords": ["transliteration", "transliterate", "Ukrainian", "English"],
     "homepage": "https://github.com/fre5h/transliteration",
     "type": "library",
     "license": "MIT",
