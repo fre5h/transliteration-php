@@ -1,6 +1,6 @@
 # Transliteration
 
-PHP library for transliteration. 🇺🇦 🇬🇧 🇷🇺 🔡 🐘
+PHP library for transliteration. 🇺🇦 🇬🇧 🔡 🐘
 
 [![Scrutinizer Quality Score](https://img.shields.io/scrutinizer/g/fre5h/transliteration-php.svg?style=flat-square)](https://scrutinizer-ci.com/g/fre5h/transliteration-php/)
 [![Build Status](https://img.shields.io/github/workflow/status/fre5h/transliteration-php/CI/main?style=flat-square)](https://github.com/fre5h/transliteration-php/actions?query=workflow%3ACI+branch%3Amain+)
@@ -38,11 +38,6 @@ PHP library for transliteration. 🇺🇦 🇬🇧 🇷🇺 🔡 🐘
                 <br />
                 http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
             </td>
-        </tr>
-        <tr>
-            <td>Russian</td>
-            <td>English</td>
-            <td>custom</td>
         </tr>
     </tbody>
 </table>
