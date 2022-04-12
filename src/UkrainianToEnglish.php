@@ -144,6 +144,7 @@ class UkrainianToEnglish implements TransliteratorInterface
         $ukrainianLetters = \array_keys(self::UKRAINIAN_TO_ENGLISH_RULES);
 
         foreach ($characters as $i => $character) {
+            // Check that vowel inside word
             if (0 !== $i && \in_array($character, $vowelsWithExceptions, true) && \in_array($characters[$i - 1], $ukrainianLetters, true)) {
                 $characters[$i] = self::VOWEL_EXCEPTIONS[$character];
             }
