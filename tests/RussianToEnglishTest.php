@@ -31,6 +31,11 @@ class RussianToEnglishTest extends TestCase
         $this->transliterator = new Transliterator();
     }
 
+    protected function tearDown(): void
+    {
+        unset($this->transliterator);
+    }
+
     /**
      * @dataProvider alphabetProvider
      */
@@ -39,7 +44,7 @@ class RussianToEnglishTest extends TestCase
         self::assertEquals($transliteratedText, $this->transliterator->ruToEn($russianText));
     }
 
-    public function alphabetProvider(): iterable
+    public static function alphabetProvider(): iterable
     {
         yield ['А', 'A'];
         yield ['Б', 'B'];

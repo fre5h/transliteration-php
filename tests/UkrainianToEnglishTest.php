@@ -29,6 +29,11 @@ class UkrainianToEnglishTest extends TestCase
         $this->transliterator = new Transliterator();
     }
 
+    protected function tearDown(): void
+    {
+        unset($this->transliterator);
+    }
+
     /**
      * @dataProvider alphabetProvider
      * @dataProvider officialExamplesProvider
@@ -39,193 +44,201 @@ class UkrainianToEnglishTest extends TestCase
         $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }
 
-    public function alphabetProvider(): iterable
+    public static function alphabetProvider(): iterable
     {
-        yield ['А', 'A'];
-        yield ['Б', 'B'];
-        yield ['В', 'V'];
-        yield ['Г', 'H'];
-        yield ['Ґ', 'G'];
-        yield ['Д', 'D'];
-        yield ['Е', 'E'];
-        yield ['Є', 'Ye'];
-        yield ['Ж', 'Zh'];
-        yield ['З', 'Z'];
-        yield ['И', 'Y'];
-        yield ['І', 'I'];
-        yield ['Ї', 'Yi'];
-        yield ['Й', 'Y'];
-        yield ['К', 'K'];
-        yield ['Л', 'L'];
-        yield ['М', 'M'];
-        yield ['Н', 'N'];
-        yield ['О', 'O'];
-        yield ['П', 'P'];
-        yield ['Р', 'R'];
-        yield ['С', 'S'];
-        yield ['Т', 'T'];
-        yield ['У', 'U'];
-        yield ['Ф', 'F'];
-        yield ['Х', 'Kh'];
-        yield ['Ц', 'Ts'];
-        yield ['Ч', 'Ch'];
-        yield ['Ш', 'Sh'];
-        yield ['Щ', 'Shch'];
-        yield ['Ю', 'Yu'];
-        yield ['Я', 'Ya'];
-        yield ['а', 'a'];
-        yield ['б', 'b'];
-        yield ['в', 'v'];
-        yield ['г', 'h'];
-        yield ['ґ', 'g'];
-        yield ['д', 'd'];
-        yield ['е', 'e'];
-        yield ['є', 'ie'];
-        yield ['ж', 'zh'];
-        yield ['з', 'z'];
-        yield ['и', 'y'];
-        yield ['і', 'i'];
-        yield ['ї', 'i'];
-        yield ['й', 'i'];
-        yield ['к', 'k'];
-        yield ['л', 'l'];
-        yield ['м', 'm'];
-        yield ['н', 'n'];
-        yield ['о', 'o'];
-        yield ['п', 'p'];
-        yield ['р', 'r'];
-        yield ['с', 's'];
-        yield ['т', 't'];
-        yield ['у', 'u'];
-        yield ['ф', 'f'];
-        yield ['х', 'kh'];
-        yield ['ц', 'ts'];
-        yield ['ч', 'ch'];
-        yield ['ш', 'sh'];
-        yield ['щ', 'shch'];
-        yield ['ь', ''];
-        yield ['ю', 'iu'];
-        yield ['я', 'ia'];
-        yield ['\'', ''];
+        yield 'А' => ['А', 'A'];
+        yield 'Б' => ['Б', 'B'];
+        yield 'В' => ['В', 'V'];
+        yield 'Г' => ['Г', 'H'];
+        yield 'Ґ' => ['Ґ', 'G'];
+        yield 'Д' => ['Д', 'D'];
+        yield 'Е' => ['Е', 'E'];
+        yield 'Є' => ['Є', 'Ye'];
+        yield 'Ж' => ['Ж', 'Zh'];
+        yield 'З' => ['З', 'Z'];
+        yield 'И' => ['И', 'Y'];
+        yield 'І' => ['І', 'I'];
+        yield 'Ї' => ['Ї', 'Yi'];
+        yield 'Й' => ['Й', 'Y'];
+        yield 'К' => ['К', 'K'];
+        yield 'Л' => ['Л', 'L'];
+        yield 'М' => ['М', 'M'];
+        yield 'Н' => ['Н', 'N'];
+        yield 'О' => ['О', 'O'];
+        yield 'П' => ['П', 'P'];
+        yield 'Р' => ['Р', 'R'];
+        yield 'С' => ['С', 'S'];
+        yield 'Т' => ['Т', 'T'];
+        yield 'У' => ['У', 'U'];
+        yield 'Ф' => ['Ф', 'F'];
+        yield 'Х' => ['Х', 'Kh'];
+        yield 'Ц' => ['Ц', 'Ts'];
+        yield 'Ч' => ['Ч', 'Ch'];
+        yield 'Ш' => ['Ш', 'Sh'];
+        yield 'Щ' => ['Щ', 'Shch'];
+        yield 'Ю' => ['Ю', 'Yu'];
+        yield 'Я' => ['Я', 'Ya'];
+        yield 'а' => ['а', 'a'];
+        yield 'б' => ['б', 'b'];
+        yield 'в' => ['в', 'v'];
+        yield 'г' => ['г', 'h'];
+        yield 'ґ' => ['ґ', 'g'];
+        yield 'д' => ['д', 'd'];
+        yield 'е' => ['е', 'e'];
+        yield 'є' => ['є', 'ye'];
+        yield 'ж' => ['ж', 'zh'];
+        yield 'з' => ['з', 'z'];
+        yield 'и' => ['и', 'y'];
+        yield 'і' => ['і', 'i'];
+        yield 'ї' => ['ї', 'yi'];
+        yield 'й' => ['й', 'y'];
+        yield 'к' => ['к', 'k'];
+        yield 'л' => ['л', 'l'];
+        yield 'м' => ['м', 'm'];
+        yield 'н' => ['н', 'n'];
+        yield 'о' => ['о', 'o'];
+        yield 'п' => ['п', 'p'];
+        yield 'р' => ['р', 'r'];
+        yield 'с' => ['с', 's'];
+        yield 'т' => ['т', 't'];
+        yield 'у' => ['у', 'u'];
+        yield 'ф' => ['ф', 'f'];
+        yield 'х' => ['х', 'kh'];
+        yield 'ц' => ['ц', 'ts'];
+        yield 'ч' => ['ч', 'ch'];
+        yield 'ш' => ['ш', 'sh'];
+        yield 'щ' => ['щ', 'shch'];
+        yield 'ь' => ['ь', ''];
+        yield 'ю' => ['ю', 'yu'];
+        yield 'я' => ['я', 'ya'];
+        yield '\'' => ['\'', ''];
     }
 
-    public function officialExamplesProvider(): iterable
+    public static function officialExamplesProvider(): iterable
     {
         // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
         // Аа
-        yield ['Алушта', 'Alushta'];
-        yield ['Андрій', 'Andrii'];
+        yield 'Алушта' => ['Алушта', 'Alushta'];
+        yield 'Андрій' => ['Андрій', 'Andrii'];
         // Бб
-        yield ['Борщагівка', 'Borshchahivka'];
-        yield ['Борисенко',  'Borysenko'];
+        yield 'Борщагівка' => ['Борщагівка', 'Borshchahivka'];
+        yield 'Борисенко' => ['Борисенко', 'Borysenko'];
         // Вв
-        yield ['Вінниця',   'Vinnytsia'];
-        yield ['Володимир', 'Volodymyr'];
+        yield 'Вінниця' => ['Вінниця', 'Vinnytsia'];
+        yield 'Володимир' => ['Володимир', 'Volodymyr'];
         // Гг
-        yield ['Гадяч',     'Hadiach'];
-        yield ['Богдан',    'Bohdan'];
-        yield ['Згурський', 'Zghurskyi'];
+        yield 'Гадяч' => ['Гадяч', 'Hadiach'];
+        yield 'Богдан' => ['Богдан', 'Bohdan'];
+        yield 'Згурський' => ['Згурський', 'Zghurskyi'];
         // Ґґ
-        yield ['Ґалаґан', 'Galagan'];
-        yield ['Ґорґани', 'Gorgany'];
+        yield 'Ґалаґан' => ['Ґалаґан', 'Galagan'];
+        yield 'Ґорґани' => ['Ґорґани', 'Gorgany'];
         // Дд
-        yield ['Донецьк', 'Donetsk'];
-        yield ['Дмитро',  'Dmytro'];
+        yield 'Донецьк' => ['Донецьк', 'Donetsk'];
+        yield 'Дмитро' => ['Дмитро', 'Dmytro'];
         // Ее
-        yield ['Рівне',  'Rivne'];
-        yield ['Олег',   'Oleh'];
-        yield ['Есмань', 'Esman'];
+        yield 'Рівне' => ['Рівне', 'Rivne'];
+        yield 'Олег' => ['Олег', 'Oleh'];
+        yield 'Есмань' => ['Есмань', 'Esman'];
         // Єє
-        yield ['Єнакієве', 'Yenakiieve'];
-        yield ['Гаєвич',   'Haievych'];
-        yield ['Короп\'є', 'Koropie'];
+        yield 'Єнакієве' => ['Єнакієве', 'Yenakiieve'];
+        yield 'Гаєвич' => ['Гаєвич', 'Haievych'];
+        yield 'Короп\'є' => ['Короп\'є', 'Koropie'];
         // Жж
-        yield ['Житомир', 'Zhytomyr'];
-        yield ['Жанна',   'Zhanna'];
-        yield ['Жежелів', 'Zhezheliv'];
+        yield 'Житомир' => ['Житомир', 'Zhytomyr'];
+        yield 'Жанна' => ['Жанна', 'Zhanna'];
+        yield 'Жежелів' => ['Жежелів', 'Zhezheliv'];
         // Зз
-        yield ['Закарпаття', 'Zakarpattia'];
-        yield ['Казимирчук', 'Kazymyrchuk'];
+        yield 'Закарпаття' => ['Закарпаття', 'Zakarpattia'];
+        yield 'Казимирчук' => ['Казимирчук', 'Kazymyrchuk'];
         // Ии
-        yield ['Медвин',     'Medvyn'];
-        yield ['Михайленко', 'Mykhailenko'];
+        yield 'Медвин' => ['Медвин', 'Medvyn'];
+        yield 'Михайленко' => ['Михайленко', 'Mykhailenko'];
         // Іі
-        yield ['Іванків',  'Ivankiv'];
-        yield ['Іващенко', 'Ivashchenko'];
+        yield 'Іванків' => ['Іванків', 'Ivankiv'];
+        yield 'Іващенко' => ['Іващенко', 'Ivashchenko'];
         // Її
-        yield ['Їжакевич', 'Yizhakevych'];
-        yield ['Кадиївка', 'Kadyivka'];
-        yield ['Мар\'їне', 'Marine'];
+        yield 'Їжакевич' => ['Їжакевич', 'Yizhakevych'];
+        yield 'Кадиївка' => ['Кадиївка', 'Kadyivka'];
+        yield 'Мар\'їне' => ['Мар\'їне', 'Marine'];
         // Йй
-        yield ['Йосипівка', 'Yosypivka'];
-        yield ['Стрий',     'Stryi'];
-        yield ['Олексій',   'Oleksii'];
+        yield 'Йосипівка' => ['Йосипівка', 'Yosypivka'];
+        yield 'Стрий' => ['Стрий', 'Stryi'];
+        yield 'Олексій' => ['Олексій', 'Oleksii'];
         // Кк
-        yield ['Київ',      'Kyiv'];
-        yield ['Коваленко', 'Kovalenko'];
+        yield 'Київ' => ['Київ', 'Kyiv'];
+        yield 'Коваленко' => ['Коваленко', 'Kovalenko'];
         // Лл
-        yield ['Лебедин', 'Lebedyn'];
-        yield ['Леонід',  'Leonid'];
+        yield 'Лебедин' => ['Лебедин', 'Lebedyn'];
+        yield 'Леонід' => ['Леонід', 'Leonid'];
         // Мм
-        yield ['Миколаїв', 'Mykolaiv'];
-        yield ['Маринич',  'Marynych'];
+        yield 'Миколаїв' => ['Миколаїв', 'Mykolaiv'];
+        yield 'Маринич' => ['Маринич', 'Marynych'];
         // Нн
-        yield ['Ніжин',   'Nizhyn'];
-        yield ['Наталія', 'Nataliia'];
+        yield 'Ніжин' => ['Ніжин', 'Nizhyn'];
+        yield 'Наталія' => ['Наталія', 'Nataliia'];
         // Оо
-        yield ['Одеса',    'Odesa'];
-        yield ['Онищенко', 'Onyshchenko'];
+        yield 'Одеса' => ['Одеса', 'Odesa'];
+        yield 'Онищенко' => ['Онищенко', 'Onyshchenko'];
         // Пп
-        yield ['Полтава', 'Poltava'];
-        yield ['Петро',   'Petro'];
+        yield 'Полтава' => ['Полтава', 'Poltava'];
+        yield 'Петро' => ['Петро', 'Petro'];
         // Рр
-        yield ['Решетилівка', 'Reshetylivka'];
-        yield ['Рибчинський', 'Rybchynskyi'];
+        yield 'Решетилівка' => ['Решетилівка', 'Reshetylivka'];
+        yield 'Рибчинський' => ['Рибчинський', 'Rybchynskyi'];
         // Сс
-        yield ['Суми',    'Sumy'];
-        yield ['Соломія', 'Solomiia'];
+        yield 'Суми' => ['Суми', 'Sumy'];
+        yield 'Соломія' => ['Соломія', 'Solomiia'];
         // Тт
-        yield ['Тернопіль', 'Ternopil'];
-        yield ['Троць',     'Trots'];
+        yield 'Тернопіль' => ['Тернопіль', 'Ternopil'];
+        yield 'Троць' => ['Троць', 'Trots'];
         // Уу
-        yield ['Ужгород', 'Uzhhorod'];
-        yield ['Уляна',   'Uliana'];
+        yield 'Ужгород' => ['Ужгород', 'Uzhhorod'];
+        yield 'Уляна' => ['Уляна', 'Uliana'];
         // Фф
-        yield ['Фастів',   'Fastiv'];
-        yield ['Філіпчук', 'Filipchuk'];
+        yield 'Фастів' => ['Фастів', 'Fastiv'];
+        yield 'Філіпчук' => ['Філіпчук', 'Filipchuk'];
         // Хх
-        yield ['Харків',   'Kharkiv'];
-        yield ['Христина', 'Khrystyna'];
+        yield 'Харків' => ['Харків', 'Kharkiv'];
+        yield 'Христина' => ['Христина', 'Khrystyna'];
         // Цц
-        yield ['Біла Церква', 'Bila Tserkva'];
-        yield ['Стеценко',    'Stetsenko'];
+        yield 'Біла Церква' => ['Біла Церква', 'Bila Tserkva'];
+        yield 'Стеценко' => ['Стеценко', 'Stetsenko'];
         // Чч
-        yield ['Чернівці', 'Chernivtsi'];
-        yield ['Шевченко', 'Shevchenko'];
+        yield 'Чернівці' => ['Чернівці', 'Chernivtsi'];
+        yield 'Шевченко' => ['Шевченко', 'Shevchenko'];
         // Шш
-        yield ['Шостка',   'Shostka'];
-        yield ['Кишеньки', 'Kyshenky'];
+        yield 'Шостка' => ['Шостка', 'Shostka'];
+        yield 'Кишеньки' => ['Кишеньки', 'Kyshenky'];
         // Щщ
-        yield ['Щербухи',   'Shcherbukhy'];
-        yield ['Гоща',      'Hoshcha'];
-        yield ['Гаращенко', 'Harashchenko'];
+        yield 'Щербухи' => ['Щербухи', 'Shcherbukhy'];
+        yield 'Гоща' => ['Гоща', 'Hoshcha'];
+        yield 'Гаращенко' => ['Гаращенко', 'Harashchenko'];
         // Юю
-        yield ['Юрій',      'Yurii'];
-        yield ['Корюківка', 'Koriukivka'];
+        yield 'Юрій' => ['Юрій', 'Yurii'];
+        yield 'Корюківка' => ['Корюківка', 'Koriukivka'];
         // Яя
-        yield ['Яготин',     'Yahotyn'];
-        yield ['Ярошенко',   'Yaroshenko'];
-        yield ['Костянтин',  'Kostiantyn'];
-        yield ['Знам\'янка', 'Znamianka'];
-        yield ['Феодосія',   'Feodosiia'];
-        // Some text
-        yield ['Добрий день', 'Dobryi den'];
-        yield ['Привіт світ!', 'Pryvit svit!'];
+        yield 'Яготин' => ['Яготин', 'Yahotyn'];
+        yield 'Ярошенко' => ['Ярошенко', 'Yaroshenko'];
+        yield 'Костянтин' => ['Костянтин', 'Kostiantyn'];
+        yield 'Знам\'янка' => ['Знам\'янка', 'Znamianka'];
+        yield 'Феодосія' => ['Феодосія', 'Feodosiia'];
     }
 
-    public function sentencesProvider(): iterable
+    public static function sentencesProvider(): iterable
     {
-        yield ['Добрий день', 'Dobryi den'];
-        yield ['Привіт світ!', 'Pryvit svit!'];
+        yield 'єнот' => ['єнот', 'yenot'];
+        yield 'їжак' => ['їжак', 'yizhak'];
+        yield 'йорж' => ['йорж', 'yorzh'];
+        yield 'юшка' => ['юшка', 'yushka'];
+        yield 'яблуко' => ['яблуко', 'yabluko'];
+
+        yield 'Добрий день' => ['Добрий день', 'Dobryi den'];
+        yield 'Привіт світ!' => ['Привіт світ!', 'Pryvit svit!'];
+        yield 'Вредний єнот' => ['Вредний єнот', 'Vrednyi yenot'];
+        yield 'Сміливий їжак' => ['Сміливий їжак', 'Smilyvyi yizhak'];
+        yield 'Риба йорж' => ['Риба йорж', 'Ryba yorzh'];
+        yield 'Грибна юшка' => ['Грибна юшка', 'Hrybna yushka'];
+        yield 'Смачне яблуко' => ['Смачне яблуко', 'Smachne yabluko'];
     }
 }

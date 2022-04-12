@@ -66,13 +66,13 @@ class UkrainianToEnglish implements TransliteratorInterface
         'ґ' => 'g',
         'д' => 'd',
         'е' => 'e',
-        'є' => 'ie',
+        'є' => 'ye',
         'ж' => 'zh',
         'з' => 'z',
         'и' => 'y',
         'і' => 'i',
-        'ї' => 'i',
-        'й' => 'i',
+        'ї' => 'yi',
+        'й' => 'y',
         'к' => 'k',
         'л' => 'l',
         'м' => 'm',
@@ -90,28 +90,42 @@ class UkrainianToEnglish implements TransliteratorInterface
         'ш' => 'sh',
         'щ' => 'shch',
         'ь' => '',
-        'ю' => 'iu',
-        'я' => 'ia',
+        'ю' => 'yu',
+        'я' => 'ya',
         '\'' => '',
     ];
 
+    // only inside words
+    private const VOWEL_EXCEPTIONS = [
+        'є' => 'ie',
+        'ї' => 'i',
+        'й' => 'i',
+        'ю' => 'iu',
+        'я' => 'ia',
+    ];
+
     /**
-     * @param string $ukrainianText
+     * @param string $textToTransliterate
      *
      * @return string
      */
-    public static function transliterate(string $ukrainianText): string
+    public static function transliterate(string $textToTransliterate): string
     {
         $transliteratedText = '';
 
-        if ('' !== $ukrainianText) {
-            if (self::checkForZghException($ukrainianText)) {
-                $ukrainianText = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $ukrainianText);
+        if ('' !== $textToTransliterate) {
+            if (self::checkForZghException($textToTransliterate)) {
+                $textToTransliterate = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $textToTransliterate);
             }
+
+            if (1 === \preg_match('/[єюїйя]/u', $textToTransliterate)) {
+                $textToTransliterate = self::processExceptionsForVowelsInsideWords($textToTransliterate);
+            }
+
             $transliteratedText = \str_replace(
                 \array_keys(self::UKRAINIAN_TO_ENGLISH_RULES),
                 \array_values(self::UKRAINIAN_TO_ENGLISH_RULES),
-                $ukrainianText
+                $textToTransliterate
             );
         }
 
@@ -119,12 +133,33 @@ class UkrainianToEnglish implements TransliteratorInterface
     }
 
     /**
-     * @param string $ukrainianText
+     * @param string $textToTransliterate
+     *
+     * @return string
+     */
+    private static function processExceptionsForVowelsInsideWords(string $textToTransliterate): string
+    {
+        $characters = mb_str_split($textToTransliterate);
+        $vowelsWithExceptions = \array_keys(self::VOWEL_EXCEPTIONS);
+        $ukrainianLetters = \array_keys(self::UKRAINIAN_TO_ENGLISH_RULES);
+
+        foreach ($characters as $i => $character) {
+            // Check that vowel inside word
+            if (0 !== $i && \in_array($character, $vowelsWithExceptions, true) && \in_array($characters[$i - 1], $ukrainianLetters, true)) {
+                $characters[$i] = self::VOWEL_EXCEPTIONS[$character];
+            }
+        }
+
+        return \implode('', $characters);
+    }
+
+    /**
+     * @param string $textToTransliterate
      *
      * @return bool
      */
-    private static function checkForZghException(string $ukrainianText): bool
+    private static function checkForZghException(string $textToTransliterate): bool
     {
-        return (bool) \mb_substr_count($ukrainianText, 'Зг') || (bool) \mb_substr_count($ukrainianText, 'зг');
+        return (bool) \mb_substr_count($textToTransliterate, 'Зг') || (bool) \mb_substr_count($textToTransliterate, 'зг');
     }
 }
