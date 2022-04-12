@@ -17,7 +17,7 @@ PHP library for transliteration. 🇺🇦 🇬🇧 🔡 🐘
 
 ## Installation 🌱
 
-```composer req fresh/transliteration='~3.0'```
+```composer req fresh/transliteration='~4.0'```
 
 ## Available transliteration methods 🎁
 
