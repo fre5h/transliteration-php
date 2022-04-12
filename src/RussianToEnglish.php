@@ -94,19 +94,19 @@ class RussianToEnglish implements TransliteratorInterface
     ];
 
     /**
-     * @param string $russianText
+     * @param string $textToTransliterate
      *
      * @return string
      */
-    public static function transliterate(string $russianText): string
+    public static function transliterate(string $textToTransliterate): string
     {
         $transliteratedText = '';
 
-        if ('' !== $russianText) {
+        if ('' !== $textToTransliterate) {
             $transliteratedText = \str_replace(
                 \array_keys(self::RUSSIAN_TO_ENGLISH_RULES),
                 \array_values(self::RUSSIAN_TO_ENGLISH_RULES),
-                $russianText
+                $textToTransliterate
             );
         }
 

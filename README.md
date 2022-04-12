@@ -36,7 +36,7 @@ PHP library for transliteration. 🇺🇦 🇬🇧 🔡 🐘
             <td>
                 Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
                 <br />
-                http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
+                https://zakon.rada.gov.ua/laws/show/55-2010-%D0%BF#Text
             </td>
         </tr>
     </tbody>
@@ -54,7 +54,7 @@ use Fresh\Transliteration\UkrainianToEnglish;
 
 class Foo
 {
-    public function bar($text)
+    public function bar(string $text): void
     {
         // You can use in this way
         $transliterator = new Transliterator();

@@ -29,6 +29,11 @@ class UkrainianToEnglishTest extends TestCase
         $this->transliterator = new Transliterator();
     }
 
+    protected function tearDown(): void
+    {
+        unset($this->transliterator);
+    }
+
     /**
      * @dataProvider alphabetProvider
      * @dataProvider officialExamplesProvider
@@ -39,7 +44,7 @@ class UkrainianToEnglishTest extends TestCase
         $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
     }
 
-    public function alphabetProvider(): iterable
+    public static function alphabetProvider(): iterable
     {
         yield ['А', 'A'];
         yield ['Б', 'B'];
@@ -109,7 +114,7 @@ class UkrainianToEnglishTest extends TestCase
         yield ['\'', ''];
     }
 
-    public function officialExamplesProvider(): iterable
+    public static function officialExamplesProvider(): iterable
     {
         // Examples of transliteration form the resolution of the Cabinet of Ministers of Ukraine №55 (27.01.2010)
         // Аа
@@ -223,7 +228,7 @@ class UkrainianToEnglishTest extends TestCase
         yield ['Привіт світ!', 'Pryvit svit!'];
     }
 
-    public function sentencesProvider(): iterable
+    public static function sentencesProvider(): iterable
     {
         yield ['Добрий день', 'Dobryi den'];
         yield ['Привіт світ!', 'Pryvit svit!'];
