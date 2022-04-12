@@ -13,25 +13,23 @@ declare(strict_types=1);
 namespace Fresh\Transliteration;
 
 /**
- * Transliteration from Russian to English.
+ * Transliteration from Russian to Latin.
  *
  * @author Artem Henvald <genvaldartem@gmail.com>
  * @author Mykhailo Vilshansky <mvilshansky@gmail.com>
  * @author Yevgeniy Zholkevskiy <zhenya.zholkevskiy@gmail.com>
- *
- * @see http://www.ufms.spb.ru/desc/pravila-transliteracii-dind-1009.html
  */
-class RussianToEnglish implements TransliteratorInterface
+class RussianToLatin implements TransliteratorInterface
 {
     /** @const array<string, string> */
-    private const RUSSIAN_TO_ENGLISH_RULES = [
+    private const RUSSIAN_TO_LATIN_RULES = [
         'а' => 'a',
         'б' => 'b',
         'в' => 'v',
         'г' => 'g',
         'д' => 'd',
         'е' => 'e',
-        'ё' => 'e',
+        'ё' => 'yo',
         'ж' => 'zh',
         'з' => 'z',
         'и' => 'i',
@@ -64,6 +62,7 @@ class RussianToEnglish implements TransliteratorInterface
         'Г' => 'G',
         'Д' => 'D',
         'Е' => 'E',
+        'Ё' => 'Yo',
         'Ж' => 'Zh',
         'З' => 'Z',
         'И' => 'I',
@@ -104,8 +103,8 @@ class RussianToEnglish implements TransliteratorInterface
 
         if ('' !== $textToTransliterate) {
             $transliteratedText = \str_replace(
-                \array_keys(self::RUSSIAN_TO_ENGLISH_RULES),
-                \array_values(self::RUSSIAN_TO_ENGLISH_RULES),
+                \array_keys(self::RUSSIAN_TO_LATIN_RULES),
+                \array_values(self::RUSSIAN_TO_LATIN_RULES),
                 $textToTransliterate
             );
         }

@@ -16,11 +16,11 @@ use Fresh\Transliteration\Transliterator;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UkrainianToEnglish Transliterator Test.
+ * UkrainianToLatin Transliterator Test.
  *
  * @author Artem Henvald <genvaldartem@gmail.com>
  */
-class UkrainianToEnglishTest extends TestCase
+class UkrainianToLatinTest extends TestCase
 {
     protected Transliterator $transliterator;
 
@@ -37,11 +37,11 @@ class UkrainianToEnglishTest extends TestCase
     /**
      * @dataProvider alphabetProvider
      * @dataProvider officialExamplesProvider
-     * @dataProvider sentencesProvider
+     * @dataProvider otherExamplesProvider
      */
-    public function testTransliterationFromUkrainianToEnglish(string $ukrainianText, string $transliteratedText): void
+    public function testTransliterationFromUkrainianToLatin(string $ukrainianText, string $transliteratedText): void
     {
-        $this->assertEquals($transliteratedText, $this->transliterator->ukToEn($ukrainianText));
+        $this->assertEquals($transliteratedText, $this->transliterator->ukrToLat($ukrainianText));
     }
 
     public static function alphabetProvider(): iterable
@@ -225,8 +225,10 @@ class UkrainianToEnglishTest extends TestCase
         yield 'Феодосія' => ['Феодосія', 'Feodosiia'];
     }
 
-    public static function sentencesProvider(): iterable
+    public static function otherExamplesProvider(): iterable
     {
+        yield 'empty string' => ['', ''];
+
         yield 'єнот' => ['єнот', 'yenot'];
         yield 'їжак' => ['їжак', 'yizhak'];
         yield 'йорж' => ['йорж', 'yorzh'];
@@ -240,5 +242,10 @@ class UkrainianToEnglishTest extends TestCase
         yield 'Риба йорж' => ['Риба йорж', 'Ryba yorzh'];
         yield 'Грибна юшка' => ['Грибна юшка', 'Hrybna yushka'];
         yield 'Смачне яблуко' => ['Смачне яблуко', 'Smachne yabluko'];
+
+        yield 'Слава Україні! Glory to Ukraine!' => ['Слава Україні! Glory to Ukraine!', 'Slava Ukraini! Glory to Ukraine!'];
+        yield 'test тест test' => ['test тест test', 'test test test'];
+        yield '1234567890' => ['1234567890', '1234567890'];
+        yield 'test TEST 123' => ['test TEST 123', 'test TEST 123'];
     }
 }

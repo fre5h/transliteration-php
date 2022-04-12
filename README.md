@@ -32,7 +32,7 @@ PHP library for transliteration. 🇺🇦 🇬🇧 🔡 🐘
     <tbody>
         <tr>
             <td>Ukrainian</td>
-            <td>English</td>
+            <td>Latin</td>
             <td>
                 Resolution of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010
                 <br />
@@ -50,7 +50,7 @@ PHP library for transliteration. 🇺🇦 🇬🇧 🔡 🐘
 namespace Acme;
 
 use Fresh\Transliteration\Transliterator;
-use Fresh\Transliteration\UkrainianToEnglish;
+use Fresh\Transliteration\UkrainianToLatin;
 
 class Foo
 {
@@ -58,15 +58,15 @@ class Foo
     {
         // You can use in this way
         $transliterator = new Transliterator();
-        $transliteratedText = $transliterator->ukToEn($text);
+        $transliteratedText = $transliterator->ukrToLat($text);
 
         // Or like this
-        $transliteratedText = UkrainianToEnglish::transliterate($ukrainianText);
+        $transliteratedText = UkrainianToLatin::transliterate($ukrainianText);
     }
 }
 ```
 
-### ℹ️ Some examples of *Ukrainian-to-English* transliteration
+### ℹ️ Some examples of *Ukrainian-to-Latin* transliteration
 
 <table>
     <thead>

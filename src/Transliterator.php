@@ -24,9 +24,9 @@ class Transliterator
      *
      * @return string
      */
-    public function ukToEn(string $ukrainianText): string
+    public function ukrToLat(string $ukrainianText): string
     {
-        return UkrainianToEnglish::transliterate($ukrainianText);
+        return UkrainianToLatin::transliterate($ukrainianText);
     }
 
     /**
@@ -34,8 +34,8 @@ class Transliterator
      *
      * @return string
      */
-    public function ruToEn(string $russianText): string
+    public function rusToLat(string $russianText): string
     {
-        return RussianToEnglish::transliterate($russianText);
+        return RussianToLatin::transliterate($russianText);
     }
 }
