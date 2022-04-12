@@ -13,19 +13,19 @@ declare(strict_types=1);
 namespace Fresh\Transliteration;
 
 /**
- * Transliteration from Ukrainian to English.
+ * Transliteration from Ukrainian to Latin.
  *
  * According to the rules of transliteration, that are described in the resolution
  * of the Cabinet of Ministers of Ukraine №55 dated January 27, 2010.
  *
  * @author Artem Henvald <genvaldartem@gmail.com>
  *
- * @see http://zakon1.rada.gov.ua/laws/show/55-2010-%D0%BF
+ * @see https://zakon.rada.gov.ua/laws/show/55-2010-%D0%BF#Text
  */
-class UkrainianToEnglish implements TransliteratorInterface
+class UkrainianToLatin implements TransliteratorInterface
 {
     /** @const array<string, string> */
-    private const UKRAINIAN_TO_ENGLISH_RULES = [
+    private const UKRAINIAN_TO_LATIN_RULES = [
         'А' => 'A',
         'Б' => 'B',
         'В' => 'V',
@@ -95,7 +95,7 @@ class UkrainianToEnglish implements TransliteratorInterface
         '\'' => '',
     ];
 
-    // only inside words
+    // Only inside words
     private const VOWEL_EXCEPTIONS = [
         'є' => 'ie',
         'ї' => 'i',
@@ -118,13 +118,13 @@ class UkrainianToEnglish implements TransliteratorInterface
                 $textToTransliterate = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $textToTransliterate);
             }
 
-            if (1 === \preg_match('/[єюїйя]/u', $textToTransliterate)) {
+            if (1 === \preg_match('/[єїйюя]/u', $textToTransliterate)) {
                 $textToTransliterate = self::processExceptionsForVowelsInsideWords($textToTransliterate);
             }
 
             $transliteratedText = \str_replace(
-                \array_keys(self::UKRAINIAN_TO_ENGLISH_RULES),
-                \array_values(self::UKRAINIAN_TO_ENGLISH_RULES),
+                \array_keys(self::UKRAINIAN_TO_LATIN_RULES),
+                \array_values(self::UKRAINIAN_TO_LATIN_RULES),
                 $textToTransliterate
             );
         }
@@ -141,7 +141,7 @@ class UkrainianToEnglish implements TransliteratorInterface
     {
         $characters = mb_str_split($textToTransliterate);
         $vowelsWithExceptions = \array_keys(self::VOWEL_EXCEPTIONS);
-        $ukrainianLetters = \array_keys(self::UKRAINIAN_TO_ENGLISH_RULES);
+        $ukrainianLetters = \array_keys(self::UKRAINIAN_TO_LATIN_RULES);
 
         foreach ($characters as $i => $character) {
             // Check that vowel inside word
