@@ -12,7 +12,7 @@ jobs:
     name: "Composer Validate"
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Validate composer.json'
         run: composer validate --no-check-all --strict --no-check-lock
@@ -23,7 +23,7 @@ jobs:
     name: "Composer Install"
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -44,7 +44,7 @@ jobs:
       fail-fast: false
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -69,7 +69,7 @@ jobs:
       fail-fast: false
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -98,7 +98,7 @@ jobs:
           - '8.2'
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -123,7 +123,7 @@ jobs:
       fail-fast: false
     steps:
       - name: 'Checkout Code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -141,13 +141,15 @@ jobs:
         run: ./vendor/bin/phpunit -v -c phpunit.xml.dist --coverage-clover=coverage.xml
 
       - name: 'Download Coverage Files'
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           path: reports
 
       - name: 'Upload to Codecov'
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@v4
         with:
           files: ./coverage.xml
           fail_ci_if_error: true
+          flags: unittests
           verbose: true
+          token: ${{ secrets.CODECOV_TOKEN }}
