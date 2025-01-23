@@ -97,6 +97,11 @@ class UkrainianToLatin implements TransliteratorInterface
 
     // Only inside words
     private const VOWEL_EXCEPTIONS = [
+        'Є' => 'IE',
+        'Ї' => 'I',
+        'Й' => 'I',
+        'Ю' => 'IU',
+        'Я' => 'IA',
         'є' => 'ie',
         'ї' => 'i',
         'й' => 'i',
@@ -118,7 +123,7 @@ class UkrainianToLatin implements TransliteratorInterface
                 $textToTransliterate = \str_replace(['Зг', 'зг'], ['Zgh', 'zgh'], $textToTransliterate);
             }
 
-            if (1 === \preg_match('/[єїйюя]/u', $textToTransliterate)) {
+            if (1 === \preg_match('/[єїйюяЄЇЙЮЯ]/u', $textToTransliterate)) {
                 $textToTransliterate = self::processExceptionsForVowelsInsideWords($textToTransliterate);
             }
 
