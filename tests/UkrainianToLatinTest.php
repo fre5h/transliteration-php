@@ -247,5 +247,8 @@ class UkrainianToLatinTest extends TestCase
         yield 'test тест test' => ['test тест test', 'test test test'];
         yield '1234567890' => ['1234567890', '1234567890'];
         yield 'test TEST 123' => ['test TEST 123', 'test TEST 123'];
+
+        yield 'uppercase' => ['ТОВ "РЕПРО СТУДІЯ ДІАЛОГ"', 'TOV "REPRO STUDIIA DIALOH"'];
+        yield 'uppercase first' => ['ТОВ "Репро Студія Діалог"', 'TOV "Repro Studiia Dialoh"'];
     }
 }

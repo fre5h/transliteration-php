@@ -1,0 +1,11 @@
+services:
+  transliteration_php:
+    container_name: "transliteration_php"
+    image: transliteration-php:1.0
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/var/www/lib
