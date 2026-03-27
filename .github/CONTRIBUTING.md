@@ -6,7 +6,7 @@ Here are a few rules to follow in order to ease code reviews, and discussions be
 
 You MUST follow the [PSR-1](http://www.php-fig.org/psr/psr-1/), [PSR-2](http://www.php-fig.org/psr/psr-2/) standards.
 If you don't know about any of them, you should really read the recommendations.  
-You can use a helpful tool [phpcs](https://github.com/squizlabs/PHP_CodeSniffer).
+You can use a helpful tool [phpcs](https://github.com/PHPCSStandards/PHP_CodeSniffer).
 Or you can use a [PHP-CS-Fixer](http://cs.sensiolabs.org/) tool to fix all coding style issues.
 
 You MUST run the test suite.
